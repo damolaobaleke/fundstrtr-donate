@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <%-include('../partials/Navbar')%>
+
+        <div class="container">
+            <!--Section 0-->
+            <div class="row justify-content-center ml-md-2">
+                <div class="col-md-5 col-sm-12 bg-column1">
+                    <h1>Help donate<br> for growing<br><span class="business">Businesses</span></h1>
+                    <p class="mt-4 order-2 order-md-1 fs-sec0-p">Make a donation today !<br>its quick and easy.
+                    </p>
+                    <a href="/signup" class="btn px-5 py-3 mt-4 getstarted order-2">Get Started</a>
+                </div>
+
+                <div class="col-md-7 col-sm-12 bg-column2 order-1 order-md-2">
+                    <!-- Would be a video eventually from Firebase storage/Youtube/Vimeo-->
+                    <!-- <iframe class="order-1 order-md-2" src="https://www.youtube.com/embed/QINFxx3c6X8" frameborder="0" allowfullscreen></iframe>  -->
+                    <img class="img-responsive img-fluid order-1 order-md-2" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990976/Fundstrtr/Mask_Group_1_gbilau.png" alt="Tailor Video Image">
+                    <img class="play-btn" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590445926/Fundstrtr/Group_17_dshgnw.png" alt="play button" data-toggle="modal" data-target="#fsVideo">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="fsVideo" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content vd-modal-content">
+
+                    <div class="modal-header vd-modal-header border-0">
+                        <button id="closeVideo" type="button" class="close" data-dismiss="modal" onclick="stopVideo()"><span>&times;</span></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <iframe id="video" class="order-1 order-md-2" src="https://www.youtube.com/embed/uWY-VLialDI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Section 0-->
+
+        <!--Section 1-->
+        <div id="section-1-body">
+            <div class="container">
+                <div class="section-1">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-3 col-sm-12 ml-3 ml-md-0 bg-section1-column1">
+                            <h1 class="section1-h1">Simple &#38; Easy Donations</h1>
+                            <p class="fs-sec1-p">Nothing gives us more joy than helping visionaries get off the ground and scale.<br>We stand strong behind them, as we know their efforts have an impact on our various communities, which drives a brighter tommorow.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-8 ml-3 ml-md-3 ml-lg-0">
+                            <div class="container-fluid">
+                                <div id="opportunities" class="row">
+                                    <div class="col-lg-4 col-md-3 col-sm-12 mt-4">
+                                        <div class="section1-card">
+                                            <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586114784/attractive-beautiful-woman-beauty-2737046_1_ku5qzh.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <p class="card-text">It has never been easier than now to help courageous businesses, giving them the support needed to push, grow and aria-expanded their core activities</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-3 col-sm-12 mt-4">
+                                        <div class="section1-card">
+                                            <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586114784/attractive-beautiful-woman-beauty-2737046_2_giij9k.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <p class="card-text">Answers are about the past, and abilities are about the future. Fuel the visionaries today, lead the future tomorrow. Are you with us ?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-3 col-sm-12 mt-4">
+                                        <div class="section1-card">
+                                            <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586114784/attractive-beautiful-woman-beauty-2737046_3_v8spcz.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <p class="card-text">A world where funding is as accessible as oxygen. Fuel your self today on fundstrtr, lead the future tomorrow</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Section 1-->
+
+        <!--Section 2-->
+        <h1 class="text-center fs-sec2-h1">Look to invest in these businesses.</h1>
+        <div id="fs-sec2-body">
+            <div class="container">
+                <!--Needs to be a carousel-- on it! --->
+                <div class="row justify-content-center">
+                    <%for(i=0; i < 3 && i<data.length; i++){%>
+                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                            <div class="card border">
+                                <!--pass in image from db data[i].headerImage-->
+                                <img class="img-fluid img-header" src="https://images.crowdcube.com/unsafe/350x168/https://files-crowdcube-com.s3.amazonaws.com/opportunity_images/202005/359afd30ecb25d939cfed8678e8d2109.png" alt="Business logo">
+                                <!--pass in image from db data[i].logoImage-->
+                                <img class="logo rounded" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586124444/Rectangle_20_ancpsn.png" alt="Business logo">
+                                <!-- <a href="#"><img class="bookmark" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590251486/Fundstrtr/bookmark-png_yjwbda.png" alt="bookmark"></a> -->
+
+                                <a href="/donation-opportunities/pitches/<%=data[i]._id%>/details" style="text-decoration: none;">
+                                    <!--Get id from db. RESTFUlroute(SHOW) onclick-->
+                                    <div class="card-header">
+                                        <aside>
+                                            <div class="progress rounded-pill">
+                                                <div class="progress-bar progress-color" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <p class="mt-1">35% funded</p>
+                                        </aside>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <h5>
+                                                    <!--change to unique position after substringing-->
+
+                                                </h5>
+                                                <p class="days-left">60 days left</p>
+                                                <!--dynamic, count down-->
+                                                <!--Get from db RESTFUlroute(GET). countdown-->
+                                            </div>
+                                        </div>
+
+                                        <section class="d-flex justify-content-around mt-1">
+                                            <div id="ff-inline" class="wrap">
+                                                <!--dynamic, increment. match with progress-->
+                                                <p><span>$300,000</span></p>
+                                                <p>Raised</p>
+                                            </div>
+                                            <div id="ff-inline" class="wrap">
+                                                <!--dynamic, increment. each investment payment that goes through-->
+                                                <p><span>2000</span></p>
+                                                <p>Investors</p>
+                                            </div>
+                                            <div id="ff-inline" class="wrap">
+                                                <p><span></span></p>
+                                                <p>Equity</p>
+                                            </div>
+                                        </section>
+
+                                        <div class="justify-content-center mt-2">
+                                            <p class="text-justify">
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <%}%>
+                </div>
+            </div>
+        </div>
+        <!--Section 2-->
+
+
+        <!--Section 3-->
+        <div id="fs-sec3-body">
+            <div class="container justify-content-center">
+                <!-- <section class="row justify-content-center "> -->
+                <h1 class="text-center mt-5 fs-sec3-h1">Enabling growth for first class business</h1>
+                <p class="text-center">We are excited to have you with us. Seeing you tap into your deepest of connections and taking genuine control of your investment.<br>We stick with you from 0 to 1. Pre-funding, Funded and Post funding we are always thrilled to support
+                    you, there is something exciting about the process of dreamers and visionaries.</p>
+
+                <section class="row row-cols-1 justify-content-center row-cols-md-2 mt-5">
+                    <div class="col mb-4">
+                        <div class="card border-0">
+                            <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586116441/Rectangle_115_o9be0y.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Become a first class business now by getting started below and raise funding easy and swift.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card border-0">
+                            <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586116440/Rectangle_1154_vsqwx3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Your fortune 500 honor awaits you. Take the leap into getting funded by a massive pool of individuals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="d-flex p-2 bd-highlight mt-4">
+                        <a class="arrow" href="/raising"><i class="fa fa-chevron-right find h-50" aria-hidden="true"></i></a>
+                        <p class="findtext">Find out how you can get started</p>
+                    </aside>
+                </section>
+            </div>
+        </div>
+        <!--Section 3-->
+
+
+        <script>
+            function stopVideo() {
+                console.log("clicked " + this.name)
+                var video = document.getElementById("video")
+                video.setAttribute("src", "")
+                video.setAttribute("src", "https://www.youtube.com/embed/QINFxx3c6X8")
+            }
+
+            function openNav() {
+                document.getElementById("sideNav").style.width = "250px";
+            }
+
+            // var widths = [0, 500, 900];
+
+            // function resizeFn() {
+            //     if (window.innerWidth >= widths[0] && window.innerWidth < widths[2]) {
+            //         closeNav()
+            //     } else {
+            //         console.log("Greater tha 900px")
+            //     }
+            // }
+            // window.onresize = resizeFn;
+            // resizeFn();
+
+            function closeNav() {
+                document.getElementById("sideNav").style.width = "0";
+            }
+        </script>
+
+        <script src="/javascript/home.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a6f7970f75.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundonate | sign up</title>
+    <!--Essential for mobile view-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--Essential for mobile view-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/signUp.css">
+    <link rel="shortcut icon" href="/assets/logo150.png" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!--Nav-->
+    <%-include("../partials/Navbar")%>
+
+
+        <!--Modal Start-->
+        <div class="modal fade" id="Login" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content fs-lgn-modal-content">
+                    <div class="modal-header fs-lgn-modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><img class="closeModal"
+                        src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442330/Fundstrtr/Group_1193_ogdtn0.png"
+                    alt="closeModal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 justify-content-center px-5">
+                                <h5 class="mt-2 lgn-welcome-back">Welcome back</h5>
+                                <p class="mt-3">Sign in below to enjoy premium service investment Opportunities</p>
+                                <form action="/login" method="POST">
+                                    <div class="form-group">
+                                        <label class="modal-email" for="Email">Email address</label>
+                                        <input type="email" name="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="email">
+
+                                        <label class="modal-email" for="Password">Password</label>
+                                        <input type="password" name="password" class="form-control" id="Password" placeholder="password">
+                                    </div>
+                                    <div>
+                                        <a href="/signup" class="form-control btn btn-secondary rounded-pill py-2">Register</a>
+                                    </div>
+
+                                    <div>
+                                        <button type="submit" class="form-control btn btn-secondary rounded-pill mt-2 py-2">Sign In</button>
+                                    </div>
+
+                                    <small class="text-center ml-5 lgn-social-account">Or login with your social account</small>
+                                </form>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-md-3">
+                                        <a href="/auth/facebook"><img class="fb-modal" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990461/Fundstrtr/Group_1208_jvndnq.png" alt="facebook login"></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="/auth/linkedin"><img class="lnkdin-modal" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1207_fu7lme.png" alt="facebook login"></a>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <a href="/auth/google"><img class="google-modal" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1206_dki225.png" alt="facebook login"></a>
+                                    </div>
+                                </div>
+
+                                <div class="lower-background">
+                                    <p><a id="forgot" class="" href="#">Forgot Password ? </a></p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6">
+                                <img class="door" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442332/Fundstrtr/Mask_Group_ntz6js.png" alt="door image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal End-->
+        <!--Nav-->
+
+        <!--Flash(put in header partials)-->
+        <div class="container-fluid">
+            <!--if theres anything in the error array-->
+            <%if(errorMessage && errorMessage.length > 0){%>
+                <div class="row" style="">
+                    <div class="col-md-4">
+                        <div class="alert alert-danger text-center" style="border: 0px solid !important; font-size: 16px; font-family: 'Montserrat';" role="alert">
+                            <%=errorMessage%>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+                    <%if(successMessage && successMessage.length > 0){%>
+                        <div class="row" style="">
+                            <div class="col-md-4">
+                                <div class="alert alert-success text-center mt-5" role="alert">
+                                    <%=successMessage%>
+                                </div>
+                            </div>
+                        </div>
+                        <%}%>
+        </div>
+        <!--Flash(put in header partials)-->
+
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-lg-4">
+                    <!-- <img class="mt-5" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1584999718/FundStarter_Logo_enqvpl.png" alt=""> -->
+                    <div class="card border-0 mt-5">
+                        <div class="card-body">
+                            <h1 class="text-center">Welcome to Fund<span>Donate</span></h1>
+                            <small class="text-center">choose one of the following sign up methods</small>
+                            <div class="row justify-content-around justify-content-md-center">
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/facebook">
+                                        <img class="fb" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990461/Fundstrtr/Group_1208_jvndnq.png" alt="facebook login" />
+                                    </a>
+                                </div>
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/linkedin">
+                                        <img class="lnkdin" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1207_fu7lme.png" alt="facebook login" />
+                                    </a>
+                                </div>
+
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/google">
+                                        <img class="google" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1206_dki225.png" alt="facebook login" />
+                                    </a>
+                                </div>
+
+                                <small class="text-center signupinfo">or sign up using your email address below</small>
+                            </div>
+                            <form action="/signup" method="POST">
+                                <div class="form-group mt-3">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" class="form-control my-2 py-2 py-md-0" id="email" placeholder="Email" name="email" required />
+
+                                    <label for="email">Username</label>
+                                    <input type="text" class="form-control my-2 py-2 py-md-0" id="email" placeholder="username" name="username" required />
+
+                                    <!--Don't forget the password eye-->
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control my-2 py-2 py-md-0" id="password" placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be a minimum of 8 characters containing at least one number, one Upper case letter, one Lower case and one special character."
+                                        required />
+                                    <small class="password-rule">Password must be a minimum of 8 characters containing at least one number, one Upper case letter, one Lower case and one special character.</small><br>
+
+                                    <label for="confirmpassword">Confirm password</label>
+                                    <input type="password" class="form-control my-2 py-2 py-md-0" id="confirmPassword" placeholder="Password" name="confirmPassword" minlength="8" required />
+                                    <small id="auth">password's dont match</small>
+                                </div>
+
+                                <p class="card-text text-left">
+                                    Personal data controlled or used by Fundstrtr is done so in accordance with our
+                                    <a id="pp" href="#">Privacy policy</a> You can change your privacy settings and matketting preferences by visiting the settings page in your fundstrtr account
+                                </p>
+                                <button type="submit" class="btn border-0 joinbutton px-5 py-3">Next</button>
+                            </form>
+
+                            <!--Data target modal-->
+                            <p class="text-center mt-2 pb-3 pb-md-2">Already registered ?
+                                <a id="fs-login" href="#" data-target="#Login" data-toggle="modal">Login Here</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <%-include("../partials/footer.ejs")%>
+
+            <script>
+                var password = document.getElementById("password");
+                var confirmPassword = document.getElementById("confirmPassword")
+                var validation = document.getElementById('auth')
+
+                if (password.value != confirmPassword.value) {
+                    console.log("passwords dont match")
+                    validation.style.display = "block"
+                }
+            </script>
+</body>
+
+</html>

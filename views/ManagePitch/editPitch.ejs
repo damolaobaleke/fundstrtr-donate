@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+
+    <!--Semantic UI
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    Semantic UI-->
+    <link rel="stylesheet" href="/stylesheets/raisingForm.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-md py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1585083673/Frame_nct3fp.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"
+                            style="color: #283990; font-size:28px;"></i></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navlinks">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link btn px-4 py-2 invopp" href="/investopp">Investment Opportunities</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/investing">Investing</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/raising">Raising</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link login" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a id="jn" class="nav-link btn btn-primary border-0 px-5 py-2 joinbutton" href="/signup">Join</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Modal Start-->
+    <div class="modal fade" id="Login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content fs-lgn-modal-content">
+                <div class="modal-header fs-lgn-modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img class="closeModal"
+                                src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442330/Fundstrtr/Group_1193_ogdtn0.png"
+                                alt="closeModal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 justify-content-center px-5">
+                            <h5 class="mt-2 lgn-welcome-back">Welcome back</h5>
+                            <p class="mt-3">Sign in below to enjoy premium service investment Opportunities</p>
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="email">
+
+                                    <label for="Password">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="password">
+                                </div>
+                                <div>
+                                    <a href="signup" class="form-control btn btn-secondary rounded-pill py-2">Register</a>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="form-control btn btn-secondary rounded-pill mt-2 py-2">Sign In</button>
+                                </div>
+                                <small class="text-center ml-5 lgn-social-account">Or login with your social account</small>
+                            </form>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <a href="/auth/facebook"><img class="fb" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990461/Fundstrtr/Group_1208_jvndnq.png" alt="facebook login"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="/auth/linkedin"><img class="lnkdin" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1207_fu7lme.png" alt="facebook login"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="/auth/google"><img class="google" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1206_dki225.png" alt="facebook login"></a>
+                                </div>
+                            </div>
+
+                            <div class="lower-background">
+                                <p><a id="forgot" class="" href="#">Forgot Password ? </a></p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img class="door" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442332/Fundstrtr/Mask_Group_ntz6js.png" alt="door image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal End-->
+    <!--Nav-->
+
+    <!--Section 0-->
+
+    <div class="container">
+        <div class="row get-started">
+            <h1 class="py-2">Update your pitch</h1>
+        </div>
+
+        <!--GIVE A DASHBOARD LOOK! 4,8-->
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <form action="/investopp/pitches/<%=data._id%>?_method=PUT" method="POST">
+                    <div class="form-group justify-content-center">
+                        <h1><i class="far fa-id-card"></i> Your personal details</h1>
+                        <label class="" for="email">Email address</label>
+                        <input id="email" name="pitch[email]" class="form-control" type="email" value="<%=data.email%>" required>
+                        <small></small>
+
+                        <label class="" for="firstName">First Name</label>
+                        <input id="firstName" name="pitch[firstname]" class="form-control" type="text" value="<%=data.firstname%>" required>
+                        <small></small>
+
+                        <label class=" " for="lastName ">Last Name</label>
+                        <input id="lastName " name="pitch[lastname] " class="form-control " type="text " value="<%=data.lastname%>" required>
+                        <small></small>
+
+                        <label class="" for="phoneNumber">Telephone Number</label>
+                        <input id="phoneNumber" name="pitch[phoneNumber]" class="form-control" type="number" value="<%=data.phoneNumber%>" required>
+                        <small></small>
+
+                        <h1 class="mt-4"><i class="far fa-building"></i> About your business</h1>
+
+                        <label class="" for="companyCountry">Company Country</label>
+                        <br>
+                        <small>This is the country in which your company is registered. If your company is part of a holding company, 
+                            this is the country in which the top company is registered</small>
+                        <select id="companyCountry" class="custom-select mt-1" name="pitch[companyCountry]" required>
+                            <option id="choose" value="choose" selected ><span>Your current company country is <%=data.companyCountry%></span></option>
+                            <option value="NGA">Nigeria</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="SA">South Africa</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Egypt">South Africa</option>
+                            <option value="USA">United States Of America</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+
+                        <label class="mt-2" for="businessName">What is your business type ?</label>
+                        <select id="businessType" class="custom-select mt-1" name="pitch[businessType]" required>
+                            <option selected >Your current business Type is <%=data.businessType%></option>
+                            <option value="Private">Private Company</option>
+                            <option value="Public">Public Company</option>
+                        </select>
+
+                        <label class="mt-2" for="corporateStructure">What is your companys corporate structure ?</label>
+                        <select id="corporateStructure" class="custom-select mt-1" name="pitch[corporateStructure]" required>
+                            <option selected value="<%=data.corporateStructure%>">Your current corporate structure is <%=data.corporateStructure%></option>
+                            <option value="Single entity">Single entity</option>
+                            <option value="Holding company">Holding Company</option>
+                            <option value="Subsidiary">Subsidiary</option>
+                        </select>
+
+                        <label class="" for="raisingAmount">How much do you want to raise ?</label><br>
+                        <small>The minimum account you can raise is $100,000</small>
+                        <input id="raisingAmount" name="pitch[raisingAmount]" class="form-control" type="number" min="100000" value="<%=data.raisingAmount%>" readonly required>
+                        <small></small>
+
+                        <label for="raisingType">Raising Type</label>
+                        <input class="form-control" id="raisingType" type="text" value="equity" name="pitch[raisingType]" value="<%=data.raisingType%>" readonly>
+
+                        <h1 class="mt-4"><i class="far fa-registered"></i> Valid Company Information</h1>
+                        <small>Note: You would be asked to provide supporting documents</small><br>
+                        <label for="companyNumber">Company number</label>
+                        <input class="form-control" id="companyNumber" type="text" name="pitch[companyNumber]" value="<%=data.companyNumber%>" required readonly>
+
+                        <label for="companyName">Registered Company name</label><br>
+                        <small>This is your official registered name on certificate of incorporation, it will be used 
+                            on legal documentation
+                        </small>
+                        <input class="form-control" id="companyName" type="text" name="pitch[RegisteredCompanyName]" value="<%=data.RegisteredCompanyName%>" required>
+
+                        <label for="tradingName">Trading name</label><br>
+                        <small>This should be the name you are known by and will be how your raise is referred to on your pitch </small>
+                        <input class="form-control" id="tradingName" type="text" name="pitch[tradingName]" value="<%=data.tradingName%>" required>
+
+                        <label for="addressLine1">Address line 1</label>
+                        <input class="form-control" id="addressLine2" type="text" name="pitch[addressLine1]" value="<%=data.addressLine1%>" required>
+
+                        <label for="addressLine2">Address line 2</label>
+                        <input class="form-control" id="addressLine2" type="text" name="pitch[addressLine2]" value="<%=data.addressLine2%>">
+
+                        <label for="city">City</label>
+                        <input class="form-control" id="city" type="text" name="pitch[city]" value="<%=data.city%>" required>
+
+                        <label for="companywebsite">Company website URL</label><br>
+                        <small style="color: red;">Ensure website URL is typed in the right format</small>
+                        <input class="form-control" id="companywebsite" type="url" name="pitch[companyWebsite]" placeholder="https://www.example.com" pattern="https?://.*" value="<%=data.companyWebsite%>" required>
+
+                        <label for="facebookUrl">Facebook URL</label><br>
+                        <input class="form-control" id="facebookUrl" type="url" name="pitch[facebookUrl]" placeholder="https://facebook.com/profile" pattern="https?://.*" value="<%=data.facebookUrl%>" required>
+
+                        <label for="twitterUrl">Twitter URL</label><br>
+                        <input class="form-control" id="twitterUrl" type="url" name="pitch[twitterUrl]" placeholder="https://twitter.com/profile" pattern="https?://.*" value="<%=data.twitterUrl%>" required>
+
+                        <label for="instagramUrl">Instagram URL</label>
+                        <input class="form-control" id="instagramUrl" type="url" name="pitch[instagramUrl]" placeholder="https://www.instagram.com/profile" pattern="https?://.*" value="<%=data.instagramUrl%>" required>
+
+                        <label for="linkedInUrl">LinkedIn URL</label>
+                        <input class="form-control" id="linkedInUrl" type="url" name="pitch[linkedinUrl]" placeholder="https://www.linkedin.com/company/eazifunds" pattern="https?://.*" value="<%=data.linkedinUrl%>" required>
+
+                        <label for="executiveSummary">Executive Summary</label>
+                        <textarea required class="form-control" name="pitch[executiveSummary]" id="executiveSummary" cols="50" rows="10"><%=data.executiveSummary%></textarea>
+
+                        <label for="milestone">Milestone</label>
+                        <input class="form-control" id="milestone" type="text" name="pitch[milestone]" value="<%=data.milestone%>" required>
+
+                        <label for="equityOffer">Equity Offer</label><br>
+                        <small>How much are you looking to give off to investors based of your valuation?</small>
+                        <input class="form-control" id="equityOffer" type="text" name="pitch[equityOffer]" placeholder="5%" value="<%=data.equityOffer%>" readonly required>
+
+                        <label for="pmv">premoneyValuation</label><br>
+                        <input class="form-control" id="pmv" type="text" name="pitch[premoneyValuation]" value="<%=data.premoneyValuation%>" required>
+
+                        <label for="idea">Idea</label>
+                        <textarea required class="form-control" name="pitch[idea]" id="idea" cols="50" rows="10"><%=data.idea%></textarea>
+
+                        <label for="Team">Team</label><br>
+                        <small>Brief profile on the key Management: CEO, CTO, CFO, Head Products etc. As it is in your company</small>
+                        <!--<div class="accordion mt-4" id="accordion">
+                            <div class="card fs-faq-card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 fs-faq">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Member 1
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <input class="form-control my-1" id="team_name" type="text" name="pitch[Team.name]" placeholder="name" required>
+                                        <input class="form-control my-1" id="team_position" type="text" name="pitch[Team.position]" placeholder="position" required>
+                                        <textarea class="form-control my-1" id="team_details" type="text" name="pitch[Team.details]" placeholder="Details" cols="30" rows="8" maxlength="300" required></textarea>
+                                        <input class="form-control" id="pmv" type="text" name="pitch[Team.picture]" required> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card fs-faq-card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0 fs-faq">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                            Member 2
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <input class="form-control my-1" id="team_name" type="text" name="pitch[Team.name]" placeholder="name" required>
+                                        <input class="form-control my-1" id="team_position" type="text" name="pitch[Team.position]" placeholder="position" required>
+                                        <textarea class="form-control my-1" id="team_details" type="text" name="pitch[Team.details]" placeholder="Details" cols="30" rows="8" maxlength="300" required></textarea>
+                                        <input class="form-control" id="pmv" type="text" name="pitch[Team.picture]" required> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card fs-faq-card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0 fs-faq">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                            Member 3
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <input class="form-control my-1" id="team_name" type="text" name="pitch[Team.name]" placeholder="name" required>
+                                        <input class="form-control my-1" id="team_position" type="text" name="pitch[Team.position]" placeholder="position" required>
+                                        <textarea class="form-control my-1" id="team_details" type="text" name="pitch[Team.details]" placeholder="Details" cols="30" rows="8" maxlength="300" required></textarea>
+                                        <!-- <input class="form-control" id="pmv" type="text" name="pitch[Team.picture]" required> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card fs-faq-card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 fs-faq">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                                            Member 4
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <input class="form-control my-1" id="team_name" type="text" name="pitch[Team.name]" placeholder="name" required>
+                                        <input class="form-control my-1" id="team_position" type="text" name="pitch[Team.position]" placeholder="position" required>
+                                        <textarea class="form-control my-1" id="team_details" type="text" name="pitch[Team.details]" placeholder="Details" cols="30" rows="8" maxlength="300" required></textarea>
+                                        <!-- <input class="form-control" id="pmv" type="text" name="pitch[Team.picture]" required> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card fs-faq-card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 fs-faq">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                                            Member 5
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <input class="form-control my-1" id="team_name" type="text" name="pitch[Team.name]" placeholder="name" required>
+                                        <input class="form-control my-1" id="team_position" type="text" name="pitch[Team.position]" placeholder="position" required>
+                                        <textarea class="form-control my-1" id="team_details" type="text" name="pitch[Team.details]" placeholder="Details" cols="30" rows="8" maxlength="300" required></textarea>
+                                        <!-- <input class="form-control" id="pmv" type="text" name="pitch[Team.picture]" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        <h1 class="mt-4"><i class="far fa-file-pdf"></i></i> Documents</h1>
+                        <p>Please upload the following documents accordingly, this would only be made available to Investors upon approval by your “admin” once there is a request for approval by an interested investor.</p>
+                        <div class="bg-light rounded documents">
+                            • Pitch Deck<br /> • Previous Investment Agreements<br /> • Certificate of Incorporation<br /> • Memorandum of Association<br /> • Audited Financial Statements (3years)<br /> • CAP Table<br /> • Tax Returns for the last (3
+                            years)
+                            <br /> • VAT tax return<br /> • List of subsidiary & affiliated companies<br /> • Valuation report<br /> • Analysis of foreign exchange – Foreign exposure, gains or losses<br /> • Details of all borrowings, debt facilities
+                            and securities held by debt providers<br /> • Details of any financing agreement and its associated costs<br /> • Loan agreements and payment reschedule<br /> • Copyrights & other IP that belongs to the company<br /> • Trademarks,
+                            Patents, registered marks or applications for such<br /> • List of largest customers<br /> • Enterprise Risk management framework<br /> • Social impact<br /> • Employee handbook
+                        </div>
+
+                        <p class="mt-2">Please upload as it applies to your business, you can also upload any other document you may deem necessary.
+                        </p>
+                        <h3>NB: INVESTORS MAY REQUEST FOR EXTRA DOCUMENTS AS NEEDED.</h3>
+
+                        <input class="mt-4" type="file" multiple="multiple" name="fileUpload"><i class="fas fa-file-upload" style="color: #283990;"></i><br>
+                        <small>Maximum size of uploadable file is 16Mb</small><br>
+
+                        <button id="updateBtn" class="btn py-2 px-5 mt-5 joinbutton" type="submit">Update Pitch</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Section 0-->
+
+
+
+    <!--Risk Warning (Section 4)-->
+    <div id="risk-body">
+        <div class="container justify-content-center">
+            <section class="row mt-5 ml-2 ml-md-0">
+                <h1 class="risk">Risk Warning</h1>
+                <p class="mt-2">An investor may earn less than the amount invested. Information on past performance, where given, is not necessarily a guide to future performance. The situation of an entity can change rapidly, which may be as a result of several things:
+                    general economic conditions, sector-specific problems, foreign exchange depreciation and mismanagement by the entity.</p>
+                <p class="mt-2">Because you are likely to self-direct yourself for this investment, you should regularly review your portfolio, or seek professional advice, to ensure that the underlying businesses remain in line with your investment objectives. This
+                    can be particularly important for those investing towards a defined time horizon – for example, those investing for retirement via a pension.</p>
+                <p class="mt-2">This write-up is not intended to be fully inclusive of all relevant risks; we would strongly encourage you to ensure that you have read all relevant literature and that you are comfortable that you understand all of the associated risks
+                    relating to an investment before you decide whether or not to purchase it.Should you be in any doubt as to the risks involved, or to the suitability of a particular investment, you should seek professional financial advice. </p>
+            </section>
+        </div>
+    </div>
+    <%- include("../partials/footer")%>
+
+        <script src="/javascript/editPitch.js"></script>
+</body>
+
+</html>
+
+<script>
+    // var choose = document.getElementById("choose")
+    // var country = document.getElementById("companyCountry")
+    // var chosenCountry = "<%=data.companyCountry%>";
+    // if (chosenCountry != null) {
+    //     //--set value to chosenCountry
+    //     choose.setAttribute("value", chosenCountry)
+    //     console.log(choose)
+    //     //--set the text to chosenCountry
+    //     choose.textContent = chosenCountry
+    //     //--value chosen displays the textContent
+    //     country.value = choose.value
+    //     console.log(chosenCountry)
+    // }
+</script>

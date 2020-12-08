@@ -1,0 +1,417 @@
+/*Nav Bar*/
+
+.navbar {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91BE32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+}
+
+.joinbutton {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91BE32;
+    color: white;
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    /*font-size Was 14px*/
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Login Modal*/
+
+.fs-lgn-modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.fs-lgn-modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+    outline: none;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+    ;
+}
+
+.lgn-welcome-back {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91BE32;
+    border: none;
+    font-size: 1rem;
+}
+
+.lgn-social-account {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+label {
+    color: #283990;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 60px;
+    width: 420px;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+
+/*Login Modal mobile*/
+
+@media(max-width:900px) {
+    .fs-lgn-modal-content {
+        border-radius: 25px;
+        width: 340px;
+        height: 500px;
+        border: none;
+        margin-left: 1rem;
+    }
+    .door {
+        display: none;
+    }
+    .lower-background {
+        background: #283990;
+        border: 1px solid #283990;
+        border-bottom-left-radius: 25px;
+        margin-left: -3.1rem;
+        height: 40px;
+        width: 341px;
+        border-bottom-right-radius: 25px;
+    }
+    #forgot {
+        color: white;
+        margin-left: 7rem;
+        margin-top: 3rem;
+    }
+    .modal-social {
+        margin-left: -3rem;
+    }
+}
+
+
+/*Login Modal mobile*/
+
+
+/*Login Modal*/
+
+
+/*Nav Bar*/
+
+
+/*Main Content*/
+
+h1 {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-family: Montserrat;
+    color: #91BE32;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+p {
+    font-family: Montserrat;
+    color: #283990;
+    font-size: 1rem;
+}
+
+.fs-sector-cards {
+    border-radius: 25px!important;
+    border: 1px solid gray;
+    background-color: #283990;
+    width: 40%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.card-half {
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.fs-short-link {
+    color: #91be32;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.poc-img {
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.fs-hidden-sector {
+    width: 200px;
+    height: 200px;
+}
+
+.joinbutton {
+    color: #f8f8f8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: Montserrat;
+    text-align: center;
+    outline: none;
+}
+
+#last-row {
+    padding-bottom: 10rem;
+}
+
+@media(min-width: 900px) {
+    .card {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        background-color: rgb(235, 235, 190);
+        /**#FFFF9A */
+    }
+    .fs-getstarted {
+        width: 40%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        background: #91BE32;
+        color: white;
+        border-radius: 15px;
+    }
+    .fs-getstarted:hover {
+        background: #283990;
+        border-color: #91BE32;
+        color: white;
+    }
+    .fscard-half-img {
+        width: 60%;
+        height: 55%;
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0);
+    }
+    .fs-img1 {
+        margin-left: -5rem;
+        margin-top: -2rem;
+    }
+    .fs-img2 {
+        margin-top: -2rem;
+    }
+    .fs-img3 {
+        margin-left: 10rem;
+        margin-top: -40rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    #invjoin {
+        margin-left: 30rem;
+    }
+}
+
+@media(max-width:900px) {
+    .fs-getstarted {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        background: #91BE32;
+        color: white;
+        border-radius: 15px;
+    }
+    .fs-getstarted:hover {
+        background: #283990;
+        border-color: #91BE32;
+        color: white;
+    }
+    .fscard-half-img {
+        width: 30%;
+        height: 120%;
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0);
+    }
+    .fs-img1 {
+        margin-left: 13rem;
+        margin-top: -86rem;
+    }
+    .fs-img2 {
+        margin-left: 16rem;
+        margin-top: -85rem;
+    }
+    .fs-img3 {
+        margin-top: -10rem;
+    }
+    .card {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        background-color: rgb(235, 235, 190);
+        /**#FFFF9A */
+    }
+    #invjoin {
+        margin-left: 7rem;
+    }
+}
+
+
+/*Main Content*/
+
+
+/*Footer*/
+
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.lowfooter {
+    background-color: #EBEEFF;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #EBEEFF;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF
+}
+
+.footer .socials a {
+    color: #FFFFFF
+}
+
+#risk-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #EBEEFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.risk {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Footer*/

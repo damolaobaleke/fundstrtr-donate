@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat|Nunito|Poiret+One|Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1585083673/logo150_szccxn.png">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/stylesheets/raisingForm.css">
+    <link rel="stylesheet" href="/stylesheets/stepper.scss">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+    <%-include('../partials/Navbar')%>
+
+        <!--Section 0-->
+
+        <div class="container">
+            <!--progress-->
+            <div class="row">
+                <div class="col-md-12 justify-content-center">
+
+                </div>
+            </div>
+            <!--progress-->
+
+
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="card border-0">
+                        <div>
+                            <h1 id="welcome" class="text-center mt-5">Welcome become a <span class="pitch">Donatee</span></h1>
+                            <p class="text-center mt-4" style="color: #283990; font-family: 'Montserrat';">We need a few details about you in other to create a successfull pitch</p>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="step mt-1">
+                                <span><img class="personal-info-icon" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1597756115/Fundstrtr/outline_gvh9h8.png" alt=""> </span>
+                                <p>Personal Info</p>
+                                <div class="bullet">
+                                    <span class="number">1</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+
+                            <div class="step">
+                                <span><img class="business-info-icon" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1597756115/Fundstrtr/1472090_1_cq2ulv.png" alt=""></span>
+                                <p>Project Info</p>
+                                <div class="bullet">
+                                    <span class="number">2</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+
+                            <!-- <div class="step">
+                                <span><img class="company-info-icon" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1597756115/Fundstrtr/023_Sign_Form_x3p5bq.png" alt=""></span>
+                                <p class="ml-md-4">Company Info</p>
+                                <div class="bullet">
+                                    <span class="number">3</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div> -->
+
+                            <!-- <div class="step" style="margin-top:-6px;">
+                                <span><img class="extended-info-icon" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1597756115/Fundstrtr/outline_1_tfhbgo.png" alt=""></span>
+                                <p class="ml-md-4">Extended Info</p>
+                                <div class="bullet">
+                                    <span class="number">4</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div> -->
+                        </div>
+
+                        <div class="form-outer">
+                            <form action="/donation-opportunities" method="POST">
+                                <div class="page slide-page">
+                                    <div class="field">
+                                        <div class="form-group px-md-5">
+                                            <!-- <h1 class="personal-details">Your personal details</h1> -->
+                                            <label class="mt-4 mt-md-2" for="email">Email address</label>
+                                            <input id="email" name="donatee[email]" class="form-control one py-4" type="email" placeholder="johnsmith@Example.com" required>
+                                            <small class="error">please fill out this field</small><br>
+
+                                            <label class="mt-2" for="firstName">First Name</label>
+                                            <input id="firstName" name="donatee[firstname]" class="form-control one py-4" type="text" placeholder="Enter your first name here" required>
+                                            <small class="error">please fill out this field</small><br>
+
+                                            <label class="mt-2" for="lastName">Last Name</label>
+                                            <input id="lastName" name="donatee[lastname]" class="form-control one py-4" type="text" placeholder="Enter your last name here" required>
+                                            <small class="error">please fill out this field</small><br>
+
+                                            <label class="mt-2" for="phoneNumber">Telephone Number</label>
+                                            <input id="phoneNumber" name="donatee[phoneNumber]" class="form-control one py-4" type="text" placeholder="Enter your phone number here" required>
+                                            <small class="error">please fill out this field</small>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <button type="button" class="btn py-3 px-5 my-3 firstNext">Next</button>
+                                    </div>
+                                </div>
+                                <!--Step 1-->
+
+                                <!--Step 2-->
+                                <div class="page page-two">
+                                    <div class="field">
+
+                                        <label class="mt-3" for="companyCountry">Project Info</label>
+                                        <small class="error">please fill out this field</small><br>
+
+                                        <label class="mt-3" for="corporateStructure">Project Name</label><br>
+                                        <input name="donatee[projectName]" class="form-control mt-1" style="color: #283990; font-weight: bold; font-family: 'Montserrat';" type="text" placeholder="Project Name">
+
+
+                                        <label class="mt-3" for="corporateStructure">Enter the project host</label><br>
+                                        <input name="donatee[projectHost]" class="form-control mt-1" style="color: #283990; font-weight: bold; font-family: 'Montserrat';" type="text" placeholder="Project Host">
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="mt-3" for="corporateStructure">Host contact number</label><br>
+                                                <input name="donatee[hostNumber]" class="form-control mt-1" style="color: #283990; font-weight: bold; font-family: 'Montserrat';" type="text" placeholder="Contact number">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label class="mt-3" for="corporateStructure">Host email</label><br>
+                                                <input name="donatee[hostEmail]" class="form-control mt-1" style="color: #283990; font-weight: bold; font-family: 'Montserrat';" type="text" placeholder="Host email">
+
+                                            </div>
+                                        </div>
+
+
+                                        <label class="mt-2" for="raisingAmount">How much do you want to raise ?</label><br>
+                                        <small id="minimum" style="display: none;">Minimum raise is $40,000</small>
+                                        <input id="raisingAmount" name="donatee[raisingTarget]" class="form-control two" type="number" placeholder="The minimum amount you can raise is $40,000">
+                                        <small class="error">please fill out this field</small><br>
+
+
+                                        <label for="idea">Project details</label>
+                                        <textarea class="form-control" name="donatee[idea]" id="idea" cols="30" rows="8" minlength="5" maxlength="275" required></textarea>
+                                        <small class="error">please fill out this field</small><br>
+
+
+
+                                    </div>
+
+
+                                    <div class="field row justify-content-around py-3">
+                                        <button type="button" class="btn py-2 px-5 my-3 mx-md-2 prev-1 prev">Previous</button>
+                                        <button type="submit" id="submitBtn" class="btn py-2 px-5 my-3 mx-md-2 Submit">Submit</button>
+                                    </div>
+                                </div>
+                                <!--Step 2-->
+
+                                <!--Step 3 Longest-->
+
+
+                                <!--Step 4-->
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--Risk Warning (Section 4)-->
+
+        <%- include("../partials/footer")%>
+
+
+            <script type="text/javascript" src="/javascript/raisingForm.js"></script>
+
+
+</body>
+
+</html>
+
+<script>
+</script>

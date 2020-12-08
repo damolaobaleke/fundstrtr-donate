@@ -1,0 +1,743 @@
+/*Nav Bar*/
+
+.navbar {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91BE32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+    font-size: 14px;
+}
+
+.joinbutton {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91BE32;
+    color: white;
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    /*font-size Was 14px*/
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Login Modal*/
+
+.fs-lgn-modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.fs-lgn-modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+    outline: none;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+    ;
+}
+
+.lgn-welcome-back {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91BE32;
+    border: none;
+    font-size: 1rem;
+}
+
+.lgn-social-account {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+label {
+    color: #283990;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 60px;
+    width: 420px;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+
+/*Login Modal*/
+
+
+/*Login Modal mobile*/
+
+@media(max-width:900px) {
+    .fs-lgn-modal-content {
+        border-radius: 25px;
+        width: 340px;
+        height: 500px;
+        border: none;
+        margin-left: 1rem;
+    }
+    .door {
+        display: none;
+    }
+    .lower-background {
+        background: #283990;
+        border: 1px solid #283990;
+        border-bottom-left-radius: 25px;
+        margin-left: -3.1rem;
+        height: 40px;
+        width: 341px;
+        border-bottom-right-radius: 25px;
+    }
+    #forgot {
+        color: white;
+        margin-left: 7rem;
+        margin-top: 3rem;
+    }
+    .modal-social {
+        margin-left: -3rem;
+    }
+}
+
+
+/*Login Modal mobile*/
+
+
+/*Mobile Nav*/
+
+@media(max-width:900px) {
+    #sideNav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    #sideNav a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        transition: 0.4s;
+    }
+    #sideNav a:hover {
+        color: #91BE32;
+    }
+    #sideNav #closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: black;
+    }
+}
+
+@media(min-width:900px) {
+    #closebtn {
+        display: none;
+    }
+}
+
+
+/*Mobile Nav*/
+
+
+/*Nav Bar*/
+
+
+/*Section 0*/
+
+body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127_qmn6op.png"), url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    margin-top: -2rem;
+}
+
+.bg-column1 {
+    margin-top: 6rem;
+    /* margin-left: -3rem; */
+}
+
+.bg-column2 {
+    margin-top: 6rem;
+    /* margin-left: 3rem; */
+}
+
+h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #283990;
+}
+
+.fs-sec0-p {
+    font-size: 18px;
+}
+
+.fs-sec1-p {
+    font-size: 18px;
+}
+
+span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    color: #91BE32;
+}
+
+.getstarted {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    background: #91BE32;
+    border-radius: 15px;
+    color: white;
+    /* border-color: #283990; */
+}
+
+.getstarted:hover {
+    background: #283990;
+    color: #ffffff;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px rgba(160, 176, 255, 0.3);
+    border-radius: 20px;
+    /* width: 271px;
+    height: 235px;
+    margin-left: -9rem;
+    margin-top: -7rem; */
+}
+
+h4 {
+    font-size: 0.9rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    color: #283990;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+iframe {
+    width: 100%;
+    /**642px */
+    height: 474px;
+    border-radius: 25px;
+}
+
+.play-btn {
+    width: 100px;
+    height: 100px;
+    margin-top: -37rem;
+    margin-left: 17rem;
+    transition: 1s;
+    opacity: 1;
+    /* opacity: 0; */
+}
+
+.col-md-7:hover .play-btn {
+    opacity: 0.5;
+    /* opacity: 1; */
+}
+
+.vd-modal-content {
+    background: transparent;
+    border: none;
+    width: 642px;
+    margin-left: -3.5rem;
+}
+
+.vd-modal-header {
+    padding-bottom: 0rem;
+}
+
+.close {
+    padding-top: 4rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 0rem;
+    outline: none;
+}
+
+@media(min-width: 900px) {
+    .card.card-fs {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+        border-radius: 25px;
+        border: none;
+        width: 271px;
+        height: 235px;
+        margin-left: -9rem;
+        margin-top: -7rem;
+        /* height: 35rem; */
+        /* width: 23rem; */
+    }
+}
+
+@media(max-width: 900px) {
+    h1 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 47px;
+        margin-left: 3rem;
+        color: #283990;
+    }
+    .fs-sec0-p {
+        margin-left: 3rem;
+    }
+    .btn {
+        /* margin-left: 3rem; */
+        align-self: center;
+        width: 100%;
+        /*Might remove */
+    }
+    .bg-column2 {
+        margin-top: 6rem;
+        margin-left: 0.2rem;
+    }
+    .getstarted {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 2rem;
+        line-height: 22px;
+        background: #91BE32;
+        border-radius: 15px;
+        color: white;
+        width: 90%;
+        margin-left: 3rem;
+        /* border-color: #283990; */
+    }
+    .play-btn {
+        width: 100px;
+        height: 100px;
+        margin-top: -19rem;
+        margin-left: 8rem;
+        transition: 1s;
+        opacity: 1;
+        /* opacity: 0; */
+    }
+    .card.card-fs {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+        border-radius: 25px;
+        border: none;
+        width: 271px;
+        height: 235px;
+        margin-left: 0.9rem;
+        margin-top: 1rem;
+        width: 95%;
+    }
+    .vd-modal-content {
+        width: 100%;
+        background: transparent;
+        border: none;
+        margin-left: 0rem;
+        margin-top: 15rem;
+    }
+    .vd-modal-header {
+        padding-bottom: 0rem;
+    }
+    .close {
+        padding-top: 4rem;
+        padding-right: 0rem;
+        padding-bottom: 0rem;
+        padding-left: 0rem;
+        outline: none;
+    }
+    iframe {
+        height: 300px;
+    }
+}
+
+
+/*Section 0*/
+
+
+/*Section 1*/
+
+#section-1-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/BG_Design-1_qocgv0.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-bottom: 10rem;
+}
+
+.bg-column1 {
+    margin-left: -3rem;
+}
+
+.section-1 {
+    margin-top: 8rem;
+}
+
+
+/* .investmentcards{
+    margin-left: 3rem;
+} */
+
+
+/*might need to be restriced to section1 */
+
+.section1-card {
+    background: #FFFFFF;
+    box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+    border-radius: 30px;
+    border: none;
+    display: none;
+}
+
+.section1-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    color: #283990;
+    line-height: 43px;
+}
+
+.business {
+    font-size: 45px;
+    color: #91BE32;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+@media(min-width: 1200px) and (max-width: 1200px) {
+    #opportunities {
+        margin-left: -2rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .fs-sec1-p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        color: #283990;
+        /* margin-left: 3rem; */
+    }
+}
+
+
+/*Section 1*/
+
+
+/*Section 2*/
+
+#fs-sec2-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/BG_Design-2_rsikr7.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    /* padding-bottom: 10rem; */
+}
+
+
+/*card-pitch*/
+
+.bookmark {
+    height: 40px;
+    width: 40px;
+    margin-top: -14rem;
+    margin-left: 19rem;
+}
+
+#ff-inline {
+    border-right: 1px solid #e4e4e4;
+    height: 4rem;
+    padding: 0 1em;
+}
+
+@media(min-width: 900px) {
+    .days-left {
+        font-weight: 700;
+        margin-left: 9rem;
+    }
+}
+
+h2,
+legend {
+    font-weight: bold;
+    font-family: Montserrat;
+    color: black;
+    font-size: 1rem;
+    margin-left: 7rem;
+}
+
+span {
+    color: #91BE32;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #283990;
+}
+
+.fa-plus {
+    color: #283990;
+    margin-left: 7rem;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li input {
+    text-align: center;
+    padding: 16px;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .6);
+    transition: 1s;
+    transform: translateZ(1rem);
+}
+
+.card-header {
+    height: 14%;
+    background-color: inherit;
+    margin-top: 2.5rem;
+}
+
+.img-header {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.progress-color {
+    background-color: #91BE32;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;
+    /* border: 1px solid gray; add if logo wouldnt be circular/rounded */
+    margin-top: -10rem;
+    /* margin-left: 16rem; */
+}
+
+@media(max-width:900px) {
+    .fs-sec2-h1 {
+        margin-left: 0rem;
+    }
+    .card {
+        align-self: center;
+        width: 100%;
+        /* height: 230px; */
+        margin-left: 0.2rem;
+        /* margin-top: 3rem; */
+    }
+    .days-left {
+        margin-left: 8rem;
+    }
+}
+
+
+/*card-pitch*/
+
+
+/*Section 2*/
+
+
+/*Section 3*/
+
+#fs-sec3-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/BG_Design-1_qocgv0.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-bottom: 1rem;
+    margin-top: 10rem;
+}
+
+.find {
+    background-color: #91BE32;
+    border-radius: 2rem;
+    color: #FFFFFF;
+    padding: 9px 14px 26px 15px;
+}
+
+.findtext {
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+.arrow {
+    margin-left: 7.5rem;
+}
+
+@media(max-width:900px) {
+    .arrow {
+        margin-left: 2rem;
+    }
+    .fs-sec3-h1 {
+        margin-left: 0rem;
+    }
+}
+
+
+/*Section 3*/
+
+
+/*Footer*/
+
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.lowfooter {
+    background-color: #EBEEFF;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #EBEEFF;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF
+}
+
+.footer .socials a {
+    color: #FFFFFF
+}
+
+#risk-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #EBEEFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.risk {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Footer*/

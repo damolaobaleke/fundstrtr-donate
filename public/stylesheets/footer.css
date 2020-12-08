@@ -1,0 +1,123 @@
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.lowfooter {
+    background-color: #EBEEFF;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #EBEEFF;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF
+}
+
+.footer .socials a {
+    color: #FFFFFF
+}
+
+h5 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #283990;
+}
+
+h6 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.scan {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #283990;
+}
+
+.form input {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(40, 57, 144, 0.5);
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+@media(min-width: 900px) {
+    .fgsignup {
+        margin-left: 7rem;
+    }
+    .joinbutton {
+        color: #F8F8F8;
+        background: #283990;
+        border-radius: 20px;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 2.5rem;
+        width: 70%;
+    }
+}
+
+@media(max-width:900px) {
+    .lowfooter {
+        font-size: 0.8rem;
+        margin-left: -1rem;
+        margin-right: -0.96rem;
+    }
+    .fgsignup {
+        margin-left: 2rem;
+    }
+    span img {
+        width: 80%;
+    }
+    .joinbutton {
+        color: #F8F8F8;
+        background: #283990;
+        border-radius: 20px;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+    .qr img {
+        width: 100%;
+    }
+    .store {
+        width: 70%;
+        /*or 100%*/
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .scan {
+        display: none;
+    }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/duediligence-charter.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-md py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1585083673/Frame_nct3fp.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="fas fa-bars"
+                                style="color: #283990; font-size:28px;"></i></span>
+                    </button>
+
+            <div class="collapse navbar-collapse" id="navlinks">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link btn px-4 py-2 invopp" href="/donation-opportunities">Investment Opportunities</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/investing">Investing</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/raising">Raising</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+
+                    <%if(!currentUser){%>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link login" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                        </li>
+
+                        <li class="nav-item mx-3">
+                            <a id="jn" class="nav-link btn btn-primary border-0 px-5 py-2 joinbutton" href="/signup">Join</a>
+                        </li>
+                        <%}else{%>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link login" href="/logout">Log Out</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a id="jn" class="nav-link login" href="#">Signed in as <%=currentUser.username.substring(0,6)%></a>
+                            </li>
+                            <%}%>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Modal Start-->
+    <div class="modal fade" id="Login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content fs-lgn-modal-content">
+                <div class="modal-header fs-lgn-modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img class="closeModal"src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442330/Fundstrtr/Group_1193_ogdtn0.png"
+                                    alt="closeModal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 justify-content-center px-5">
+                            <h5 class="mt-2 lgn-welcome-back">Welcome back</h5>
+                            <p class="mt-3">Sign in below to enjoy premium service investment Opportunities</p>
+                            <form action="/login" method="POST">
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="email">
+
+                                    <label for="Password">Password</label>
+                                    <input type="password" name="password" class="form-control" id="Password" placeholder="password">
+                                </div>
+                                <div>
+                                    <a href="/signup" class="form-control btn btn-secondary rounded-pill py-2">Register</a>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="form-control btn btn-secondary rounded-pill mt-2 py-2">Sign In</button>
+                                </div>
+                                <small class="text-center ml-5 lgn-social-account">Or login with your social account</small>
+                            </form>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <a href="/auth/facebook"><img class="fb" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990461/Fundstrtr/Group_1208_jvndnq.png" alt="facebook login"></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="/auth/linkedin"><img class="lnkdin" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1207_fu7lme.png" alt="facebook login"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href="/auth/google"><img class="google" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1206_dki225.png" alt="facebook login"></a>
+                                </div>
+                            </div>
+
+                            <div class="lower-background">
+                                <p><a id="forgot" class="" href="#">Forgot Password ? </a></p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img class="door" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442332/Fundstrtr/Mask_Group_ntz6js.png" alt="door image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal End-->
+
+    <!--Nav-->
+
+    <!--Navigation Two-->
+    <nav id="nav-two" class="navbar navbar-expand-md py-2 bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks-two" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" @click="switchNavbar">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: #283990; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navlinks-two">
+                <ul id="short-links" class="navbar-nav text-md-center justify-content-around">
+                    <li class="nav-item"><a class="nav-link fs-nav-two px-4 px-md-0 pr-md-4" href="#sec1">Our diligence charter</a></li>
+                    <li class="nav-item"><a class="nav-link px-4 fs-nav-two" href="#sec2">Pre-live due diligence</a></li>
+                    <li class="nav-item"><a class="nav-link fs-nav-two px-4" href="#sec3">Live pitch monitoring</a></li>
+                    <li class="nav-item"><a class="nav-link fs-nav-two px-4" href="#sec4">Post-funding due diligence</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Navigation Two-->
+
+
+    <div id="sec0" class="container">
+        <!--Section-0-->
+        <h1 class="py-5">Due Diligence Charter</h1>
+        <div class="row">
+            <div class="col-md-12">
+                Fundstrtr approves every pitch on the platform to ensure it is fair, clear and not misleading, Our Due Diligence Charter outlines the analysis and verification that is conducted on equity raises, reasonable steps taken to validate businesses on Fundstrtr.
+                <br> In line with our company values, our guiding principles for this Charter are:
+
+                <ol class="mt-5">
+                    <li>Persistence: to act with integrity and treat our investors and fundraising companies fairly protecting businesses, investors & public interest
+                    </li>
+
+                    <li class="mt-1">Resilience: to act with skill, care diligence, enable proper functioning of the market and to manage any conflict of interest that may arise.
+                    </li>
+
+                    <li class="mt-1">Integrity: to promote fairness &#38; transparent with our customers and all platform users.
+                    </li>
+
+                    <li class="mt-1">Ambition: to be open and transparent with our customers supervising all activities on the platform
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!--Section-0-->
+
+        <!--Section-1-->
+        <div id="sec1" class="row">
+            <h3 class="py-5">Our Due diligence Charter</h3>
+            <div class="col-md-12">
+                <p class="sec-fs-p">Fundstrtr is obligated to create a favourable, fair and transparent environment for its users. Investor protection and transparency are of the utmost importance to us, you have worked hard for your money and you deserve a favourable environment
+                    to help nurture your resources.<br>Due diligence is the mother of good luck, so we continually review our existing due diligence processes to ensure we remain at the forefront of the investment crowdfunding market. This charter outlines
+                    Fundstrtr’s current standard due diligence process. Because of the assorted variety of businesses that raise money on Fundstrtr’s crowdfunding platform, we can’t cover all circumstances in this Charter, which ought to be perused as
+                    direction.
+                    <br><br>Fundstrtr doesn’t underwrite any of the businesses raising capital on the crowdfunding platform, nor do we give venture guidiance of any portrayal, so before choosing to invest we emphatically urge all Fundstrtr members to
+                    undertake their own due diligence & look into and if there is vulnerability, to receive independent advice before investing.
+                    <br><br> Forthcoming investors ought to also take care to:
+                </p>
+
+                <ul class="mt-2">
+                    <li>complete their own due diligence and read all data and reports on the pitch page cautiously. This Charter outlines areas that are not reviewed as part of our standard due diligence process;
+                    </li>
+
+                    <li class="mt-1">peruse the risk warnings and comprehend that forward-looking statements and business visionary opinions may not end up being right and many early-stage companies come up short.
+                    </li>
+                </ul>
+
+                <p>Investors ought to know that Fundstrtr depends upon data provided by every applicant company and its executives who are required to ensure all data gave is valid and precise. Fundstrtr likewise depends on outsider instruments to conduct
+                    some due diligence. Fundstrtr’s investor terms and conditions, including Fundstrtr’s limitation of liability, apply to investments made on the platform & site and can be found here.</p>
+            </div>
+        </div>
+        <!--Section-1-->
+
+        <!--Section-2-->
+        <div id="sec2" class="row">
+            <h3 class="py-5">Pre-live due diligence</h3>
+            <div class="col-md-12">
+                <p class="sec-fs-p">The following due diligence is carried on each company before the pitch is open to investment:
+                </p>
+
+                <ul class="mt-2">
+                    <li>conduct background checks on the company to ensure fit and properness of the company&#180;s board of directors, officers and controlling shareholder(s) including personal credit and bankruptcy checks, director’s disqualification checks,
+                        previous company checks and accreditation checks;
+                    </li>
+
+                    <li class="mt-1">verify the business proposition of the company and fact check all information and claims made in the pitch text to ensure it is fair, clear and not misleading by obtaining, where possible, independent evidence;
+                    </li>
+
+                    <li>obtain any commercial contracts mentioned in a pitch, and;</li>
+                    <li>verify any material professional accreditations, licenses or of such kind;</li>
+                    <li>if applicable, check whether the company has any available tax relief and make clear to potential investors the availability.
+                    </li>
+
+                    <p class="mt-3 sec-fs-p">Likewise, all businesses that raise capital on Fundstrtr&#180;s platform provides guarantees to Fundstrtr in Fundstrtr’s terms and conditions that include:
+                    </p>
+
+                    <li>that the share capital table precisely mirrors the fully diluted position, which every single dilutive component, such as granted and unallocated share options, are considered into ascertaining the percentage of equity on offer to
+                        investors; and</li>
+
+                    <li>that the organization is not involved with any present litigation and that it is not aware of any compromised lawsuit.</li>
+                </ul>
+            </div>
+        </div>
+        <!--Section-2-->
+
+        <!--Section-3-->
+        <div id="sec3" class="row">
+            <h3 class="py-5">Live pitch monitoring</h3>
+            <div class="col-md-12">
+                <p class="sec-fs-p">During the time the pitch is live on Fundstrtr’s platform, the compliance team will likewise:
+                </p>
+
+                <ul class="mt-2">
+                    <li>inspect any investment patterns notified by Fundstrtr’s pitch manipulation tool to ensure investments are veritable and not made to unduly upgrade the exhibition of a pitch.
+                    </li>
+                    <p class="py-2">We do not:</p>
+                    <li class="mt-1">inspect any of the confined documents, pitch videos, pitch updates, forum discussions or the content of investor events that aren’t organised by Fundstrtr.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!--Section-3-->
+
+
+        <!--Section-4-->
+        <div id="sec4" class="row">
+            <h3 class="py-5">Post-funding Due diligence</h3>
+            <div class="col-md-12">
+                <p class="sec-fs-p">When a pitch reaches its funding target we conduct further due diligence on the business before investments are completed and prior to any funds being captured:
+                </p>
+
+                <ul class="mt-2">
+                    <li>check the company’s share structure against;</li>
+                    <li class="">inspect the Articles of Association to ascertain the share classes and their rights;
+                    </li>
+                    <li>inspect any existing Shareholder Agreements, Subscription Agreements or Investment Agreements to check whether the shareholder rights and company obligations are compatible with a crowdfunding round. In light of this inspection we
+                        may, if we consider necessary, recommend amendments to the documents or make appropriate disclosures to investors to outline investor rights or risks; </li>
+                    <li>inspect any known commercial loan agreements, convertible loan instruments and any director and/or shareholder loan agreements, and require any undocumented loans to be documented; • require the company to warrant that the share price
+                        payable by investors has been calculated on a fully-diluted basis, taking into account all issued shares, options and convertible loans; </li>
+                    <li> a full search and inspection of intellectual property rights are not carried out but claims of trademark, patent, or URL ownership in pitch text are checked by seeking verification from the company and searching public registers. We
+                        also require the transfer of ownership to the company if Fundstrtr becomes aware that any material intellectual property rights are not wholly owned by the company.</li>
+
+                    <p class="py-2 sec-fs-p">Any fundamental disclosures from the post-funding legal due diligence process are set out in the Legal Review document, which will be emailed to investors towards the start of the two days cooling off period.<br> The following information,
+                        except if explicitly referenced in the pitch, isn’t constantly looked over as a major aspect of our standard due diligence, so investors ought to accept that the accompanying have not been checked:
+                    </p>
+
+                    <li class="">commercial contracts;</li>
+                    <li class="">employment contracts;</li>
+                    <li class="">ownership of assets or the potential that a company infringes third-party intellectual property rights;</li>
+                    <li class="">property related documents such as leases;</li>
+                    <li class="">complete site visits to a company’s offices; and</li>
+                    <li class="">licensing and regulatory arrangements;</li>
+                    <li class="">historical financial performance of the company;</li>
+                    <li class="">financial projections of the company;</li>
+                    <li class="">cash position and cash burn of the company;</li>
+                    <li class="">key suppliers or customers of the company.</li>
+                    <p class="pt-2 pb-4 sec-fs-p">While we do provide guidance on valuations, it is the company’s choice to price their investment offer and eventually the crowd then decides if they are happy & willing to invest at that price.<br><br>Under Fundstrtr’s Terms and Conditions,
+                        every applicant company, acting by its executives, must guarantee that all data which is given to Fundstrtr is true and accurate.
+
+                    </p>
+
+                </ul>
+            </div>
+        </div>
+        <!--Section-4-->
+    </div>
+
+    <%-include("../partials/footer/")%>
+
+        <script>
+            $(window).scrollTop(function() {
+                $('#nav-two').addClass('sticky-top')
+            })
+        </script>
+
+</body>
+
+</html>

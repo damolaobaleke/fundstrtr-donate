@@ -1,0 +1,457 @@
+/*Nav Bar*/
+
+.navbar {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91BE32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+    font-size: 14px;
+}
+
+.joinbutton {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91BE32;
+    color: white;
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    /*font-size Was 14px*/
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Login Modal*/
+
+.fs-lgn-modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.fs-lgn-modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+    outline: none;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+    ;
+}
+
+.lgn-welcome-back {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91BE32;
+    border: none;
+    font-size: 1rem;
+}
+
+.lgn-social-account {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+label {
+    color: #283990;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 60px;
+    width: 420px;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+
+/*Login Modal*/
+
+
+/*Login Modal mobile*/
+
+@media(max-width:900px) {
+    .fs-lgn-modal-content {
+        border-radius: 25px;
+        width: 340px;
+        height: 500px;
+        border: none;
+        margin-left: 1rem;
+    }
+    .door {
+        display: none;
+    }
+    .lower-background {
+        background: #283990;
+        border: 1px solid #283990;
+        border-bottom-left-radius: 25px;
+        margin-left: -3.1rem;
+        height: 40px;
+        width: 341px;
+        border-bottom-right-radius: 25px;
+    }
+    #forgot {
+        color: white;
+        margin-left: 7rem;
+        margin-top: 3rem;
+    }
+    .modal-social {
+        margin-left: -3rem;
+    }
+}
+
+
+/*Login Modal mobile*/
+
+
+/*Mobile Nav*/
+
+@media(max-width:900px) {
+    #sideNav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    #sideNav a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        transition: 0.4s;
+    }
+    #sideNav a:hover {
+        color: #91BE32;
+    }
+    #sideNav #closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: black;
+    }
+}
+
+@media(min-width:900px) {
+    #closebtn {
+        display: none;
+    }
+}
+
+
+/*Mobile Nav*/
+
+
+/*Nav Bar*/
+
+
+/*Section 0*/
+
+body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127_qmn6op.png"), url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #283990;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.fs-hello {
+    font-family: 'Montserrat', sans-serif;
+    color: #283990;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.summary {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #283990;
+}
+
+.card {
+    width: 435px;
+    height: 266px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(40, 57, 144, 0.25);
+    border-radius: 40px;
+    float: right;
+}
+
+.card.card-investments {
+    width: 591px;
+    height: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(40, 57, 144, 0.25);
+    border-radius: 40px;
+    margin-right: 20px;
+    padding-left: 30px;
+    z-index: 2;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    color: #283990;
+}
+
+h4 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #283990;
+}
+
+.fs-low-card-layer {
+    width: 590px;
+    position: absolute;
+    top: 370px;
+    left: 48px;
+    /* margin-top: -35px;
+    margin-left: 1px; */
+    height: 105px;
+    background: #91BE32;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.investments-column {
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
+
+.fs-low-card-layer-blue {
+    width: 435px;
+    margin-left: unset;
+    height: 93px;
+    margin-top: -2rem;
+    background: #283990;
+    border-radius: 0px 0px 40px 40px;
+    float: right;
+}
+
+.documents {
+    font-weight: 700;
+    color: #FFFFFF!important;
+    margin-top: 3.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.documents-two {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.col1-info {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6B8C25;
+}
+
+.col2-info {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #283990;
+}
+
+
+/* sec 2 */
+
+.fs-bg-sec2 {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/BG_Design-1_qocgv0.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.submit {
+    width: 264.51px;
+    height: 54px;
+    background: #283990;
+    color: #FFFFFF!important;
+    box-shadow: 0px 4px 4px rgba(40, 57, 144, 0.25);
+    border-radius: 20px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.submit:hover {
+    background-color: #91BE32;
+    border: 1px solid #91BE32!important;
+}
+
+.dates-of-inv::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dates-of-inv::-webkit-scrollbar-thumb {
+    background-color: #91BE32;
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.lowfooter {
+    background-color: #EBEEFF;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #EBEEFF;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF
+}
+
+.footer .socials a {
+    color: #FFFFFF
+}
+
+#risk-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #EBEEFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.risk {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Footer*/

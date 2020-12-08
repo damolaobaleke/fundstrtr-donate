@@ -1,0 +1,747 @@
+/*NavBar*/
+
+.navbar {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link {
+    font-size: 14px;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91BE32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+    font-size: 14px;
+}
+
+.joinbutton {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91BE32;
+    color: white;
+}
+
+.invest-button {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+    font-family: 'Montserrat';
+    width: 267.11px;
+    height: 40px;
+    font-weight: 600;
+}
+
+.invest-button:hover {
+    background-color: #91BE32;
+    color: white;
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Login Modal*/
+
+.fs-lgn-modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.fs-lgn-modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+    outline: none;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+    ;
+}
+
+.lgn-welcome-back {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91BE32;
+    border: none;
+    font-size: 1rem;
+}
+
+.lgn-social-account {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+label {
+    color: #283990;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 60px;
+    width: 420px;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+
+/*Login Modal*/
+
+
+/*NavBar*/
+
+@media(min-width:900px) {
+    body {
+        background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127_qmn6op.png"), url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+        background-position: left top, right top;
+        background-repeat: no-repeat, no-repeat;
+    }
+    .logo {
+        /* width: 205px;
+        height: 202.24px;
+        /* border: 1px solid gray; add if logo wouldnt be circular/rounded 
+        margin-top: -6rem;
+        margin-left: 6rem;
+        border: 5px solid #FFFFFF;
+        filter: drop-shadow(0px 10px 20px rgba(146, 163, 255, 0.2));
+        border-radius: 100px!important;
+        object-fit: cover; */
+        margin-top: -6rem;
+        margin-top: -6rem;
+        margin-left: 3rem;
+    }
+    .img-header {
+        width: 100vw;
+        height: 290px;
+    }
+    .card.card-fs {
+        /* position: absolute; */
+        width: 955px;
+        height: 482px;
+        left: 110px;
+        top: -180px;
+        box-shadow: 0px 5px 10px rgba(40, 57, 144, 0.25);
+        border-radius: 40px;
+        padding: 50px 50px 50px 50px;
+        /*background-color: #FFFFFF;
+        border-radius: 25px;
+        flex-direction: inherit;
+        box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2); */
+    }
+    .fs-values {
+        color: #6B8C25;
+        font-size: 16px;
+        font-family: Montserrat;
+    }
+    .card.team-card {
+        border-radius: 25px;
+        box-shadow: 0px 15px 30px rgba(48, 48, 53, 0.2);
+        max-height: 500px;
+        height: 500px;
+    }
+    .team-card .card-body {
+        overflow-y: scroll;
+    }
+    .team-img {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+    }
+    .team-card-title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 30px;
+        color: #283990;
+    }
+    .team-card-text {
+        font-family: Montserrat;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 30px;
+        color: #283990;
+    }
+    .fs-summary {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .bg-doc {
+        width: 218px;
+        height: 44.59px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 10px rgba(40, 57, 144, 0.25);
+        border-radius: 5px;
+    }
+    .request-access-card {
+        width: 286px;
+        height: 52px;
+        background: #283990;
+        border-radius: 5px;
+        color: #FFFFFF;
+    }
+    .fs-invest-input {
+        background: #FFFFFF;
+        border: 1px solid #283990;
+        box-sizing: border-box;
+        border-radius: 20px;
+        height: 40px;
+    }
+    .fs-col1 {
+        border-right: 1px solid rgba(40, 57, 144, 0.2);
+        margin-right: 50px;
+    }
+    .fs-low-card-layer {
+        width: 954px;
+        height: 105px;
+        margin-left: 6rem;
+        margin-top: -14rem;
+        background: #91BE32;
+        border-radius: 0px 0px 40px 40px;
+    }
+    .fs-idea {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .documents {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #FFFFFF!important;
+        margin-top: 3.5rem;
+    }
+    .documents:hover {
+        text-decoration: none;
+        color: #91BE32;
+    }
+    .progress {
+        width: 85%;
+        height: 5px;
+    }
+    .progress-bar {
+        background-color: #91BE32;
+        font-family: 'Montserrat';
+        font-weight: 800;
+    }
+    .btn-discussion {
+        width: 267.11px;
+        height: 54px;
+        color: #FFFFFF;
+        background: #283990;
+        border-radius: 20px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .btn-discussion:hover {
+        color: #FFFFFF!important;
+        background-color: #91BE32!important;
+    }
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-style: normal;
+        color: #283990;
+        font-weight: bold
+    }
+    h2 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-size: 18px;
+        color: #283990;
+        font-weight: bold
+    }
+    h3 {
+        font-family: 'Montserrat';
+        color: #283990;
+        font-weight: bold
+    }
+    p {
+        font-family: 'Montserrat';
+    }
+    .short-link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        color: #91BE32;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    span {
+        font-weight: bold;
+        /* font-size: 1.5rem; */
+    }
+    .raised {
+        font-size: 1.2rem;
+    }
+    .equity {
+        font-size: 0.9rem;
+    }
+    #equity-column {
+        font-size: 1.2rem;
+    }
+    .btn-disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        color: #c0c0c0;
+        background-color: #EBEEFF;
+        opacity: 0.4;
+    }
+    .btn-enabled {
+        opacity: 1;
+        color: #F8F8F8;
+        background: #283990;
+    }
+    input {
+        /* border-color: #283990; */
+    }
+    .social-links {
+        font-size: 2.5rem;
+    }
+    .milestones {
+        /* margin-left: -1.2rem; */
+        color: #283990;
+        list-style-type: none;
+        padding-left: 0px;
+    }
+    li {
+        font-family: Montserrat;
+        font-size: 14px;
+    }
+    #documents {
+        padding-bottom: 8rem;
+    }
+    small {
+        font-family: 'Montserrat';
+        font-size: 12px;
+    }
+    #alert {
+        display: none;
+    }
+    #equityCard {
+        /* width: 500px; */
+        /* height: 500px; */
+        background-color: #ffffff;
+    }
+    .equityBody {
+        background-color: #91BE32;
+    }
+    h4 {
+        font-family: 'Montserrat';
+        font-weight: bold;
+    }
+    .sharetype {
+        font-size: 2rem;
+    }
+    .optionBox {
+        width: 200px;
+        border: 2px solid #91BE32;
+        color: #283990;
+        font-family: 'Montserrat';
+        font-weight: 500;
+    }
+    .optionBox:hover {
+        width: 200px;
+        border: 2px solid white;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        background-color: #283990;
+    }
+    .option-picked {
+        color: white;
+        border: 2px solid #91BE32;
+        background-color: #283990!important;
+    }
+    .investment-option-value {
+        font-weight: bold;
+        font-family: 'Montserrat';
+        color: black;
+    }
+    .fs-pitchApproval {
+        color: #283990;
+    }
+    .fs-discussions {
+        border: 1px solid #283990;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+    }
+    .video {
+        height: 400px;
+        width: 500px;
+        border-radius: 25px;
+    }
+    .comment_days {
+        font-size: 0.9rem;
+        font-family: 'Montserrat';
+        /* margin-left: 25rem; */
+        color: black;
+    }
+    .reply_box {
+        display: none;
+        border-radius: 25px;
+        width: max-content;
+        border: 1.5px solid #283990;
+        outline: none;
+    }
+    .icon-send {
+        position: absolute;
+        right: 6px;
+        bottom: 0px;
+        display: none;
+    }
+    .fs-header-icon {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    /**Scroll**/
+    .team-card .card-body::-webkit-scrollbar {
+        width: 4px;
+    }
+    .team-card .card-body::-webkit-scrollbar-thumb {
+        border-radius: 25px;
+        background-color: #91BE32;
+    }
+    .team-card .card-body::-webkit-scrollbar-track {
+        border-radius: 25px;
+        margin-bottom: 12px;
+    }
+}
+
+@media(max-width:900px) {
+    .logo {
+        height: 160px;
+        width: 160px;
+        /* border: 1px solid gray; add if logo wouldnt be circular/rounded */
+        margin-top: -6rem;
+        margin-left: 6rem;
+    }
+    .img-header {
+        width: 100vw;
+        height: 200px;
+    }
+    .card.card-fs {
+        background-color: #FFFFFF;
+        /* border-radius: 25px; */
+        flex-direction: inherit;
+        box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+    }
+    .card.team-card {
+        box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+        border-radius: 20px;
+    }
+    .fs-summary {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .fs-invest-input {
+        background: #FFFFFF;
+        border: 1px solid #283990;
+        box-sizing: border-box;
+        border-radius: 20px;
+        height: 40px;
+    }
+    .fs-col1 {
+        border-right: 1px solid rgba(40, 57, 144, 0.2);
+        margin-right: 50px;
+    }
+    .fs-low-card-layer {
+        width: 955px;
+        height: 105px;
+        left: 275px;
+        top: 653px;
+        background: #91BE32;
+        border-radius: 0px 0px 40px 40px;
+    }
+    .documents {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .documents:hover {
+        text-decoration: none;
+        color: #91BE32;
+    }
+    .progress {
+        width: 100%;
+    }
+    .progress-bar {
+        background-color: #91BE32;
+        font-family: 'Montserrat';
+        font-weight: 800;
+    }
+    h1 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        color: #283990;
+        font-weight: bold;
+        text-align: center;
+    }
+    h2 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-size: 18px;
+        color: #91BE32;
+        font-weight: bold
+    }
+    h3 {
+        font-family: 'Montserrat';
+        color: #91BE32;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    p {
+        font-family: 'Montserrat';
+    }
+    .short-link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        color: #91BE32;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    span {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .raised {
+        font-size: 1.2rem;
+    }
+    .equity {
+        font-size: 0.9rem;
+    }
+    #equity-column {
+        font-size: 1.2rem;
+    }
+    .btn-disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        color: #c0c0c0;
+        background-color: #EBEEFF;
+        opacity: 0.4;
+    }
+    .btn-enabled {
+        opacity: 1;
+        color: #F8F8F8;
+        background: #283990;
+    }
+    input {
+        /* border-color: #283990; */
+    }
+    .social-links {
+        font-size: 2.5rem;
+    }
+    .milestones {
+        margin-left: -1.2rem;
+    }
+    li {
+        font-family: Montserrat;
+        font-size: 14px;
+    }
+    #documents {
+        padding-bottom: 8rem;
+    }
+    small {
+        font-family: 'Montserrat';
+        font-size: 12px;
+    }
+    #alert {
+        display: none;
+    }
+    #equityCard {
+        /* width: 500px; */
+        /* height: 500px; */
+        background-color: #ffffff;
+    }
+    .equityBody {
+        background-color: #91BE32;
+    }
+    h4 {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .sharetype {
+        font-size: 2rem;
+    }
+    .optionBox {
+        width: 100%;
+        border: 2px solid #91BE32;
+        color: #283990;
+        font-family: 'Montserrat';
+        font-weight: 500;
+    }
+    .optionBox:hover {
+        width: 200px;
+        border: 2px solid white;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        background-color: #283990;
+    }
+    .option-picked {
+        color: white;
+        border: 2px solid #91BE32;
+        background-color: #283990!important;
+    }
+    .investment-option-value {
+        font-weight: bold;
+        font-family: 'Montserrat';
+        color: black;
+    }
+    .fs-pitchApproval {
+        color: #283990;
+    }
+    .video {
+        height: 200px;
+        width: 340px;
+        border-radius: 25px;
+    }
+    .comment_days {
+        font-size: 0.9rem;
+        font-family: 'Montserrat';
+        /* margin-left: 25rem; */
+        color: black;
+    }
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.lowfooter {
+    background-color: #EBEEFF;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #EBEEFF;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF
+}
+
+.footer .socials a {
+    color: #FFFFFF
+}
+
+#risk-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #EBEEFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.risk {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Footer*/

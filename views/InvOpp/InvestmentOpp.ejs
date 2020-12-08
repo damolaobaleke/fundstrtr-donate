@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr | Donation Opportunites</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheets/InvestmentOpp.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <%-include('../partials/Navbar')%>
+
+        <div class="container-fluid">
+            <div class="row border-bottom border-top">
+                <!-- <span class="py-2 border-bottom"> -->
+                <div class="col-sm-6 col-md-5">
+                    <h1 class="text-center mt-2 py-2">Donation Opportunities</h1>
+                </div>
+
+                <!-- <div class="col-sm-6 col-md-4">
+                    <span>
+                    <input class="form-control mt-2 mr-sm-2 mr-md-5" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fas fa-search"></i> 
+                    </span>
+                </div> -->
+
+                <!-- <div class="col-md-3">
+                    <a href="#" onclick="showFilter()" class="filter">Filter<i class="fas fa-plus"></i></a>
+                </div> -->
+                <!-- </span> -->
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div id="filterDepth" class="bg-light">
+                        <form action="" method="GET">
+                            <fieldset>
+                                <legend class="pt-3">Sector</legend>
+                                <ul class="py-3">
+                                    <li class="pr-2"><input id="fs-filter_sector_technology" type="checkbox" class="btn btn-primary rounded" name="sector" value="Technology">
+                                        <label class="sectors" for="fs-filter_sector_technology" v-on:click="sectorPick()">Technology</label>
+                                    </li>
+
+                                    <li class="px-2"><input id="fs-filter_sector_agric" type="checkbox" class="" name="sector" value="Agriculture">
+                                        <label class="sectors" for="fs-filter_sector_agric" @click="sectorPick">Agriculture</label>
+                                    </li>
+
+                                    <li class="px-2"><input id="fs-filter_sector_finance" type="checkbox" class="" name="sector" value="Finance">
+                                        <label class="sectors" for="fs-filter_sector_finance" @click="sectorPick">Finance</label>
+                                    </li>
+
+                                    <li class="px-2"><input id="fs-filter_sector_realEstate" type="checkbox" class="" name="sector" value="Real Estate">
+                                        <label class="sectors" for="fs-filter_sector_realEstate" @click="sectorPick">Real Estate</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <button class="btn py-2 px-5 applybutton" type="submit">Apply filters</button>
+                            <!--GET. gets all investment in db with particular sector value-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Flash(put in header partials)-->
+        <div class="container">
+            <!--if theres anything in the error array-->
+            <%if(errorMessage && errorMessage.length > 0){%>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="alert alert-danger mt-5" role="alert">
+                            <%=errorMessage%>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+                    <%if(successMessage && successMessage.length > 0){%>
+                        <div class="row mt-1" style="">
+                            <div class="col-md-4">
+                                <div class="alert alert-success text-center mt-5" role="alert">
+                                    <%=successMessage%>
+                                </div>
+                            </div>
+                        </div>
+                        <%}%>
+        </div>
+        <!--Flash(put in header partials)-->
+
+        <div class="container">
+            <%let fundedPercentage,amountRaised,raisingTarget%>
+                <div class="row justify-content-center pb-5">
+                    <%for(i=0; i<data.length; i++){%>
+                        <!--Check if pitch is funded by more than 30%-->
+                        <%amountRaised %>
+                            <!--Raising target-->
+                            <%raisingTarget = data[i].raisingTarget%>
+                                <%fundedPercentage = amountRaised/raisingTarget * 100%>
+
+                                    <%# if(fundedPercentage > 30){%>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4 pitch">
+                                            <div class="card">
+                                                <!--pass in image from db data[i].headerImage-->
+                                                <img class="img-fluid img-header" src="https://images.crowdcube.com/unsafe/350x168/https://files-crowdcube-com.s3.amazonaws.com/opportunity_images/202005/359afd30ecb25d939cfed8678e8d2109.png" alt="Business logo">
+
+
+                                                <p class="days-left">
+                                                    <%=data[i].daysLeftToInvest%>
+                                                        days left
+                                                </p>
+
+
+                                                <a class="fs-pitch-link" href="/donation-opportunities/pitches/<%=data[i]._id%>/details" style="text-decoration: none;">
+                                                    <!--Get id from db. RESTFUlroute(SHOW) onclick-->
+                                                    <!-- <div class="card-header"> -->
+
+                                                    <!-- </div> -->
+                                                    <div class="card-body">
+                                                        <div class="container">
+                                                            <!--pass in image from db data[i].logoImage-->
+                                                            <img class="logo" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586124444/Rectangle_20_ancpsn.png" alt="Business logo">
+                                                            <div class="row">
+                                                                <h5>
+                                                                    <%=data[i].tradingName%>
+                                                                </h5>
+                                                                <aside class="mt-2">
+                                                                    <div class="progress rounded-pill">
+                                                                        <div class="progress-bar progress-color" role="progressbar" style="width: 0%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+
+                                                                    <span>Target:</span> $
+
+                                                                    <%var aR = data[i].amountRaised%>
+                                                                        <!--Raising target-->
+                                                                        <%var rA =data[i].raisingAmount%>
+                                                                            <% let percentRaised = aR/rA * 100%>
+                                                                                <input style="display: none;" class="percentage" value="<%=fundedPercentage%>">
+                                                                                <p class="mt-1">
+                                                                                    <%if(isNaN(percentRaised)){%>
+                                                                                        <%percentRaised = 0%>
+                                                                                            <%}%>
+                                                                                                <%=Math.round(percentRaised)%>% funded</p>
+                                                                </aside>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <section class="d-flex justify-content-around mt-1">
+                                                            <div id="ff-inline" class="wrap">
+                                                                <!--dynamic, increment.-->
+                                                                <%if(data[i].amountRaised != null){%>
+                                                                    <p><span>$<%=data[i].amountRaised%></span></p>
+                                                                    <%}%>
+                                                                        <p>Raised</p>
+                                                            </div>
+                                                            <div id="ff-inline" class="wrap">
+                                                                <!--dynamic, increment. each investment payment that goes through-->
+                                                                <p><span><%=data[i].investor.length%></span></p>
+                                                                <p>Donaters</p>
+                                                            </div>
+                                                            <div id="ff-inline" class="wrap">
+                                                                <p><span><%=data[i].equityOffer%>
+                                                            </span>
+                                                                </p>
+                                                                <p>Equity</p>
+                                                            </div>
+                                                        </section>
+
+                                                        <div class="justify-content-center mt-2">
+                                                            <p class="text-justify">
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <%# }%>
+                                            <%}%>
+
+
+                </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <%if(!currentUser){%>
+                        <div class="blur-bg text-center">
+                            <h3>To view the remaining exciting pitches please Login or Sign Up</h3>
+                            <p><a id="jn" class="btn btn-primary border-0 px-5 py-2 joinbutton mr-2" href="#" data-toggle="modal" data-target="#Login">Log In</a>,
+                                <a id="jn" class="btn btn-primary border-0 px-5 py-2 joinbutton ml-2" href="/signup" target="_blank">Sign Up</a>
+                            </p>
+                        </div>
+                        <%}%>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Risk Warning (Section 4)-->
+        <div id="risk-body">
+            <div class="container justify-content-center">
+                <section class="row mt-5 ml-2 ml-md-0">
+                    <h1 class="risk">Risk Warning</h1>
+                    <p class="mt-2">An investor may earn less than the amount invested. Information on past performance, where given, is not necessarily a guide to future performance. The situation of an entity can change rapidly, which may be as a result of several
+                        things: general economic conditions, sector-specific problems, foreign exchange depreciation and mismanagement by the entity.</p>
+                    <p class="mt-2">Because you are likely to self-direct yourself for this investment, you should regularly review your portfolio, or seek professional advice, to ensure that the underlying businesses remain in line with your investment objectives. This
+                        can be particularly important for those investing towards a defined time horizon – for example, those investing for retirement via a pension.</p>
+                    <p class="mt-2">This write-up is not intended to be fully inclusive of all relevant risks; we would strongly encourage you to ensure that you have read all relevant literature and that you are comfortable that you understand all of the associated
+                        risks relating to an investment before you decide whether or not to purchase it.Should you be in any doubt as to the risks involved, or to the suitability of a particular investment, you should seek professional financial advice.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <%if(currentUser){%>
+            <input style="display: none;" class="user" type="text" value="<%=currentUser._id%>">
+            <%}%>
+
+
+
+                <script src="/javascript/investmentOpp.js"></script>
+                <%- include("../partials/footer")%>
+</body>
+
+</html>
+
+<script>
+    let progress = document.querySelectorAll(".progress-bar");
+    var pitchPercentageRaised = document.querySelectorAll(".percentage");
+
+
+    for (i = 0; i < pitchPercentageRaised.length; i++) {
+        console.log(pitchPercentageRaised[i].value)
+
+        let barPercentage = Math.round("<%=fundedPercentage%>")
+        progress[i].style.width = `${pitchPercentageRaised[i].value}%`
+
+    }
+
+
+
+
+    function showFilter() {
+        var filter = document.getElementsByTagName("a")[12];
+        var filterdepth = document.getElementById("filterDepth");
+
+        //filter.addEventListener("click", function() {
+        if (filterdepth.style.display == "none") {
+            filterdepth.style.display = "block";
+            filter.style.color = "#91BE32"
+        } else {
+            filterdepth.style.display = "none";
+            filter.style.color = "#283990"
+        }
+        //})
+    }
+</script>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/post-funding-support.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-md py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1585083673/Frame_nct3fp.png" alt=""></a>
+            <button onclick="openNav()" class="navbar-toggler" data-toggle="collapse" data-target="#navlinks" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"style="color: #283990; font-size:28px;"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navlinks">
+                <ul id="sideNav" class="navbar-nav ml-auto">
+                    <li>
+                        <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;
+                    </li>
+                    
+                    <li class="nav-item mx-1">
+                        <a class="nav-link btn px-4 py-2 donatees" href="/donation-opportunities">Investment Opportunities</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/investing">Investing</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/raising">Raising</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+
+                    <%if(!currentUser){%>
+                        <li class="nav-item mx-4">
+                            <a onclick="" class="nav-link login" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                        </li>
+
+                        <li class="nav-item mx-3">
+                            <a id="jn" class="nav-link btn btn-primary border-0 px-5 py-2 joinbutton" href="/signup">Join</a>
+                        </li>
+                        <%}else{%>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link login" href="/logout">Log Out</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a id="jn" class="nav-link login" href="#">Signed in as <%=currentUser.username.substring(0,6)%></a>
+                            </li>
+                            <%}%>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Flash(put in header partials)-->
+    <div class="container">
+        <!--if theres anything in the error array-->
+        <%if(errorMessage && errorMessage.length > 0){%>
+            <div class="row" style="">
+                <div class="col-md-4">
+                    <div class="alert alert-danger mt-5" role="alert">
+                        <%=errorMessage%>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+                <%if(successMessage && successMessage.length > 0){%>
+                    <div class="row mt-5" style="">
+                        <div class="col-md-4">
+                            <div class="alert alert-success text-center mt-5" role="alert">
+                                <%=successMessage%>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+    </div>
+    <!--Flash(put in header partials)-->
+
+
+    <!--Modal Start-->
+    <div class="modal fade" id="Login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content fs-lgn-modal-content">
+                <div class="modal-header fs-lgn-modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img class="closeModal"
+                                src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442330/Fundstrtr/Group_1193_ogdtn0.png"
+                                alt="closeModal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 justify-content-center px-5">
+                            <h5 class="mt-2 lgn-welcome-back">Welcome back</h5>
+                            <p class="mt-3">Sign in below to enjoy premium service investment Opportunities</p>
+                            <form action="/login" method="POST">
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="email">
+
+                                    <label for="Password">Password</label>
+                                    <input type="password" name="password" class="form-control" id="Password" placeholder="password">
+                                </div>
+                                <div>
+                                    <a href="/signup" class="form-control btn btn-secondary rounded-pill py-2">Register</a>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="form-control btn btn-secondary rounded-pill mt-2 py-2">Sign In</button>
+                                </div>
+                                <small class="text-center ml-2 ml-md-5 lgn-social-account">Or login with your social account</small>
+                            </form>
+
+                            <div class="row justify-content-around justify-content-md-center modal-social">
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/facebook"><img class="fb" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990461/Fundstrtr/Group_1208_jvndnq.png" alt="facebook login"></a>
+                                </div>
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/linkedin"><img class="lnkdin" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1207_fu7lme.png" alt="facebook login"></a>
+                                </div>
+
+                                <div class="col-3 col-md-3">
+                                    <!--Google login route-->
+                                    <a href="/auth/google"><img class="google" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1206_dki225.png" alt="facebook login"></a>
+                                </div>
+                            </div>
+
+                            <div class="lower-background">
+                                <p><a id="forgot" class="" href="#">Forgot Password ? </a></p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img class="door" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442332/Fundstrtr/Mask_Group_ntz6js.png" alt="door image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal End-->
+
+    <!--Nav-->
+
+
+    <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 209.61 59.48" class="fs-shape" style="
+     width: 2190.5px;
+     transform: translate(-40%, -30%) rotate(24deg) ;
+     fill: #fcfca3c2;">
+    <g>
+        <path xmlns:default="http://www.w3.org/2000/svg" d="M191.43,59.48H18.18A18.18,18.18,0,0,1,0,41.3H0a18.17,18.17,0,0,1,15.78-18L189,.16a18.18,18.18,0,0,1,20.58,18V41.3A18.18,18.18,0,0,1,191.43,59.48Z"></path>
+        </g>
+    </svg>
+
+    <div class="container">
+        <!--Section 0-->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h1>Grow your startup with these lovely benefits from our partners</h1>
+                <p class="py-4 fs-sec0-p">Whew! You’re finally funded hurray. We are proud of you are happy to be here to share this exciting moment with you. Welcome to the gang.</p>
+
+                <p class="fs-sec0-p">We have good news…… and we are sure you will find this of interest. As a exclusive proud member of the Fundstrtr funded club, we&#39;ve partnered with a wide range of awesome companies who are looking forward to your growth. With the help
+                    of our partners, we have compiled and built a selection of exclusive services and benefits to help spike your company&#39;s development</p>
+            </div>
+
+            <div class="col-md-6">
+                <img class="fs-img-partners" src="https://images.unsplash.com/photo-1558522195-e1201b090344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="partners">
+            </div>
+        </div>
+        <!--Section 0-->
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-around mt-4">
+            <div class="col-md-12">
+                <ul class="text-md-center fs-links">
+                    <a class="px-2" href="#Advertising">Advertising</a>
+                    <a class="px-2" href="#Design">Design</a>
+                    <a class="px-2" href="#Cloud Services">Cloud services</a>
+                    <a class="px-2" href="#CRM">CRM </a>
+                    <a class="px-2" href="#Email">Email </a>
+                    <a class="px-2" href="#Hosting">Hosting</a>
+                    <a class="px-2" href="#SEO">SEO</a>
+                    <a class="px-2" href="#Travel">Travel </a>
+                    <a class="px-2" href="#Finance">Finance</a>
+                    <a class="px-2" href="#Accounting">Accounting</a>
+                    <a class="px-2" href="#Legal">Legal</a>
+                    <a class="px-2" href="#Co-working space">Co-Working space</a>
+                </ul>
+
+                <ul class="text-md-center fs-links">
+                    <a class="px-2" href="#Advertising">Tax</a>
+                    <a class="px-2" href="#Advertising">Accelerator/Incubator </a>
+                    <a class="px-2" href="#Advertising">Database </a>
+                    <a class="px-2" href="#Advertising">HR & Recruiting</a>
+                    <a class="px-2" href="#Advertising">Consulting & Training </a>
+                    <a class="px-2" href="#Advertising">Web development </a>
+                    <a class="px-2" href="#Advertising">Mentors </a>
+                    <a class="px-2" href="#Advertising">Branding & Marketing </a>
+                    <a class="px-2" href="#Advertising">PR</a>
+                    <a class="px-2" href="#Advertising">Immigration</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Section 1-->
+    <div class="container mt-5">
+        <h3 id="Advertising">Advertising</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <!--Section 2-->
+    <div class="container mt-5">
+        <h3 id="Design">Design</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Biteable</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Behance</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Section 3-->
+    <div class="container mt-5">
+        <h3 id="Cloud Services">Cloud Services</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <!--Section 4-->
+    <div class="container mt-5">
+        <h3 id="CRM">CRM</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Twilio</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <!--Section 5-->
+    <div class="container mt-5">
+        <h3 id="Email">Email</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Hosting">Hosting</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="SEO">SEO</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Travel">Travel</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Finance">Finance</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Accounting">Accounting</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Legal">Legal</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h3 id="Co-working space">Co-working space</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Tax">Tax</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Accelerator/Incubator">Accelerator/Incubator</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h3 id="Database">Database</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="HR">HR &#83; Recruiting</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h3 id="Consulting">Consulting &#83; Training</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Web development">Web development</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Mentors">Mentors</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Branding & Marketing">Branding &#83; Marketing</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="PR">PR</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3 id="Immigration">Immigration</h3>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img img-responsive" src="https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+
+                    <div class="card-body">
+                        <h5>Zendesk</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+
+
+    <!--Risk Warning (Section 4)-->
+    <div id="risk-body">
+        <div class="container justify-content-center">
+            <section class="row mt-5 ml-2 ml-md-0">
+                <h1 class="risk">Risk Warning</h1>
+                <p class="mt-2">An investor may earn less than the amount invested. Information on past performance, where given, is not necessarily a guide to future performance. The situation of an entity can change rapidly, which may be as a result of several things:
+                    general economic conditions, sector-specific problems, foreign exchange depreciation and mismanagement by the entity.</p>
+                <p class="mt-2">Because you are likely to self-direct yourself for this investment, you should regularly review your portfolio, or seek professional advice, to ensure that the underlying businesses remain in line with your investment objectives. This
+                    can be particularly important for those investing towards a defined time horizon – for example, those investing for retirement via a pension.</p>
+                <p class="mt-2">This write-up is not intended to be fully inclusive of all relevant risks; we would strongly encourage you to ensure that you have read all relevant literature and that you are comfortable that you understand all of the associated risks
+                    relating to an investment before you decide whether or not to purchase it.Should you be in any doubt as to the risks involved, or to the suitability of a particular investment, you should seek professional financial advice.
+                </p>
+            </section>
+        </div>
+    </div>
+
+
+    <%- include("../partials/footer")%>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/thinking-about-raising.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+
+<!--Nav-->
+<%-include('../partials/Navbar')%>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-7">
+                <div class="card border-0">
+                    <h1 class="">Thinkin about raising ?</h1>
+                    <p class="mt-4">Raising investment isn’t just about the capital itself anymore.Crowdfunding is the new addition to your marketing mix that helps build a community faster and keep them engaged for longer.</p>
+                    <p class="text-left mt-4">We’ve helped over 800 wonderful businesses rally their communities to raise a total of £580m.</p>
+                    <p class="text-left mt-4">We want to help convert your superfans into shareholders to fuel your long-term growth.</p>
+                    <a href="/raising/create-a-pitch" class="mt-2 py-3 px-4 text-center fs-getstarted ">Get Started</a>
+                </div>
+            </div>
+
+            <div class="col-md-5 ">
+                <img id="" class="fscard-half-img fs-img1 rounded-circle " src="https://images.unsplash.com/photo-1523575166472-a83a0ed1d522?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80 " alt=" ">
+                <img id="" class="fscard-half-img fs-img2  rounded-circle " src="https://images.unsplash.com/photo-1532617754634-819393ff5106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80 " alt=" ">
+                <img id="" class="fscard-half-img fs-img3  rounded-circle " src="https://images.unsplash.com/photo-1532617074212-c503101ae0b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80 " alt=" ">
+            </div>
+        </div>
+
+        <div class="mt-5 ">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-around">
+                    <a class="fs-short-link pr-1 pr-md-0" href="#sectors">Sectors</a>
+                    <a class="fs-short-link " href="#pof ">Power of communities</a>
+                    <a class="fs-short-link pl-1 pl-md-0" href="#why">Why Fundstrtr ?</a>
+                    <!-- <li><a class=" " href="# "></a></li> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="pof " class="row mt-5 ">
+            <div class="col-md-6 ">
+                <img class="poc-img " src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80 " alt="communities ">
+            </div>
+
+            <div class="col-md-6 ">
+                <h2 class="text-center text-md-left">Power of communities</h2>
+                <p class="mt-3 ">Community is the holy grail. Whether yours is busting at the seams or just starting out, getting people to buy into you, not just from, is a no brainer.
+
+                    <br><br>We’ve seen just how powerful communities can be, from BrewDog's Equity Punks to Monzo's digital banking backers.<br><br> According to the team at Chip, “our shareholders’ zeal for telling their friends is largely responsible
+                    for our rapid growth." Chip 's investors are 400% more likely to refer a friend and 500% less likely to churn than their average users.<br></p>
+            </div>
+        </div>
+
+        <h2 id="sectors" class="mt-5 text-center text-md-left">Sectors</h2>
+
+        <div class="d-flex justify-content-around row mt-4">
+            <!--changed from returning the data directly-->
+            <a href="#"><img id="sector-tech" class="fs-hidden-sector rounded-circle py-2 py-md-0" onmouseover="changeSectorTech()" onmouseout="changeSectorTech()" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1591032719/Fundstrtr/Technology_sector_fuipjt.png"
+                    alt="Technology"></a>
+            <a href="#"><img id="sector-agric" class="fs-hidden-sector rounded-circle py-2 py-md-0" onmouseover="SectorAgric()" onmouseout="SectorAgric()" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1591039055/Fundstrtr/Agriculture_sector_mmbhcl.png"
+                    alt="Agriculture"></a>
+            <a href="#"><img id="sector-re" class="fs-hidden-sector rounded-circle py-2 py-md-0" onmouseover="SectorRealEstate()" onmouseout="SectorRealEstate()" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1591039055/Fundstrtr/Real_Estate_sector_zv0ioq.png"
+                    alt="Real estate"></a>
+            <a href="#"><img id="sector-fintech" class="fs-hidden-sector rounded-circle py-2 py-md-0" onmouseover="SectorFinTech()" onmouseout="SectorFinTech()" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1591039055/Fundstrtr/FinTech_sector_qjziku.png"
+                    alt="finTech"></a>
+        </div>
+
+        <div id="why" class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="mt-4 text-center text-md-left">Why choose Fundstrtr ?</h2>
+                <h4 class="mt-4">Sign Up in 3 seconds</h4>
+                <p>Use any of your government verified ID to sign up quickly!</p>
+
+                <h4>Gain access to the Crowcube nominee</h4>
+                <p>As well as having a dedicated campaign manager, you’ll be backed by our experienced marketing team who are passionate about bringing your ideas to life. They know exactly how to craft the perfect pitch and promote it effectively.</p>
+
+                <h4>Receive support from our trusted team</h4>
+                <p>As well as having a dedicated campaign manager, you’ll be backed by our experienced marketing team who are passionate about bringing your ideas to life. They know exactly how to craft the perfect pitch and promote it effectively.</p>
+
+                <h4>Track your campaign in real-time</h4>
+                <p>You can monitor every aspect of your campaign with our personalised Entrepreneur Dashboard. It tracks success in real-time, showing how much daily investment is needed to hit your target. Our dashboard also has tools to help you create
+                    tracked links, helping you dive deep into your data and optimise your marketing channels. You can find more information about the dashboard in our quick video, </p>
+
+            </div>
+        </div>
+
+
+        <div id="last-row" class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="text-center">We believe in helping you take that leap<br>Fund your business and become a fortune 500</h2>
+                <a id="invjoin" class="btn btn-primary border-0 mt-4 px-4 joinbutton" href="signup">Join Us</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Risk Warning (Section 4)-->
+    <div id="risk-body">
+        <div class="container justify-content-center">
+            <section class="row mt-5 ml-2 ml-md-0">
+                <h1 class="risk">Risk Warning</h1>
+                <p class="mt-2">An investor may earn less than the amount invested. Information on past performance, where given, is not necessarily a guide to future performance. The situation of an entity can change rapidly, which may be as a result of several things:
+                    general economic conditions, sector-specific problems, foreign exchange depreciation and mismanagement by the entity.</p>
+                <p class="mt-2">Because you are likely to self-direct yourself for this investment, you should regularly review your portfolio, or seek professional advice, to ensure that the underlying businesses remain in line with your investment objectives. This
+                    can be particularly important for those investing towards a defined time horizon – for example, those investing for retirement via a pension.</p>
+                <p class="mt-2">This write-up is not intended to be fully inclusive of all relevant risks; we would strongly encourage you to ensure that you have read all relevant literature and that you are comfortable that you understand all of the associated risks
+                    relating to an investment before you decide whether or not to purchase it.Should you be in any doubt as to the risks involved, or to the suitability of a particular investment, you should seek professional financial advice.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="/javascript/thinkingAboutRaising.js"></script>
+
+    <%- include("../partials/footer")%>
+        </body>
+
+</html>

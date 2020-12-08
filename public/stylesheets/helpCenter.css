@@ -1,0 +1,531 @@
+.input-group-text {
+    background-color: #ffffff;
+    border-right: none;
+}
+
+
+/*Nav Bar*/
+
+.navbar {
+    background: #f8f8f8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91be32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+    font-size: 14px;
+}
+
+.joinbutton {
+    color: #f8f8f8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91be32;
+    color: white;
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    /*font-size Was 14px*/
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Login Modal*/
+
+.fs-lgn-modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.fs-lgn-modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+    outline: none;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+}
+
+.lgn-welcome-back {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91be32;
+    border: none;
+    font-size: 1rem;
+}
+
+.lgn-social-account {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+label {
+    color: #283990;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 60px;
+    width: 420px;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+
+/*Login Modal*/
+
+
+/*Login Modal mobile*/
+
+@media (max-width: 900px) {
+    .fs-lgn-modal-content {
+        border-radius: 25px;
+        width: 340px;
+        height: 500px;
+        border: none;
+        margin-left: 1rem;
+    }
+    .door {
+        display: none;
+    }
+    .lower-background {
+        background: #283990;
+        border: 1px solid #283990;
+        border-bottom-left-radius: 25px;
+        margin-left: -3.1rem;
+        height: 40px;
+        width: 341px;
+        border-bottom-right-radius: 25px;
+    }
+    #forgot {
+        color: white;
+        margin-left: 7rem;
+        margin-top: 3rem;
+    }
+    .modal-social {
+        margin-left: -3rem;
+    }
+}
+
+
+/*Login Modal mobile*/
+
+
+/*Mobile Nav*/
+
+body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127_qmn6op.png"), url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    font-family: "Montserrat";
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.lowfooter {
+    background-color: #ebeeff;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #ebeeff;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+}
+
+.footer .socials a {
+    color: #ffffff;
+}
+
+#risk-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #ebeeff;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.risk {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+
+/*Footer*/
+
+
+/* Help center page CSS - RIchard Saseun stylesheet */
+
+.help-card {
+    background-color: white;
+    box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+    border-radius: 25px;
+}
+
+.btn-help-center {
+    background: #91be32;
+    border: 0px solid black!important;
+    border-radius: 20px 0px 20px 20px;
+}
+
+.btn-help-center:hover {
+    background: #283990;
+    box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+}
+
+.help-list li {
+    margin: 10px 0;
+}
+
+.aside-content {
+    background: #ebeeff;
+    border-radius: 25px;
+}
+
+.contact-form {
+    background: #f3f2f2;
+    /* opacity: 0.2; */
+    border-radius: 20px;
+}
+
+.text-fund-primary {
+    color: #283990;
+}
+
+.text-fund-secondary {
+    color: #91be32;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.attachment-label {
+    border: 1px solid rgba(40, 57, 144, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background: #283990;
+    border-radius: 20px;
+}
+
+
+/* career page CSS - RIchard Saseun stylesheet */
+
+.increase-lh {
+    line-height: 1.8em;
+}
+
+.fs-play-button {
+    position: absolute;
+    margin-left: 18rem;
+    margin-top: 10rem;
+}
+
+.career-nav-item {
+    border: 1px solid #283990;
+    border-radius: 15px;
+}
+
+.career-nav-item:hover {
+    background: #283990;
+    border: 2px solid #91be32;
+}
+
+.career-nav-item>a:hover {
+    color: white;
+}
+
+.logos {
+    border: solid 3px #91be32;
+    padding: 0.1em;
+    background: #283990 content-box;
+    width: 68px;
+    height: 68px;
+    color: white !important;
+    font-family: Montserrat;
+    font-style: normal;
+    margin-left: 4rem;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+p.logos-s.text-center {
+    color: white !important;
+    font-family: Montserrat;
+    font-style: normal;
+    /* margin-left: 4rem; */
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.logos-s {
+    margin-top: 0.7rem;
+}
+
+#qualities {
+    padding-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+    .logos {
+        border: solid 3px #91be32;
+        padding: 0.1em;
+        background: #283990 content-box;
+        width: 68px;
+        height: 68px;
+        color: white !important;
+        font-family: Montserrat;
+        font-style: normal;
+        margin-left: 7rem;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 37px;
+    }
+}
+
+.card {
+    background: #ffffff;
+    box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+    border-radius: 20px;
+}
+
+.card-text {
+    color: #283990;
+}
+
+.section-space {
+    margin: 200px 0 0 0;
+}
+
+.position-card {
+    background: #fbfbe9;
+    box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+    border-radius: 20px;
+}
+
+
+/* .fs-card-img-top {
+  min-height: 146px;
+  border-radius: 20px 20px 20px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-clip: border-box;
+  background-origin: padding-box;
+} */
+
+.fs-card-top {
+    max-height: 146px;
+    border-radius: 20px 20px 20px 0px;
+    clip: rect(0, 0, 10px, 20px);
+}
+
+.btn-career {
+    background: #283990;
+    border: 0px solid black!important;
+    border-radius: 20px 0px 20px 20px;
+}
+
+h2 {
+    color: #283990;
+    font-family: 'Montserrat';
+}
+
+.fs-careers-link {
+    color: #91be32;
+    font-family: 'Montserrat';
+    font-style: 1.1rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.btn-career:hover {
+    background: #91be32;
+    box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+}
+
+.img-culture {
+    box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+    border-radius: 40px;
+}
+
+.img-culture::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10%;
+    content: ".";
+    background: #ffffff;
+    /* DS 1 */
+    box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+    border-radius: 40px;
+}
+
+.fs-knowledgehub-card {
+    background-color: #ffffff;
+    box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+    border-radius: 45px;
+    width: 561px;
+    height: 400px;
+    margin-top: 8rem;
+}
+
+.think {
+    margin-left: 3rem;
+    margin-top: -4rem;
+    position: absolute;
+    border-radius: 40px;
+}
+
+.fs-play-button {
+    position: absolute;
+    margin-left: 17rem;
+    margin-top: 5rem;
+}
+
+@media (max-width: 760px) {
+    .fs-knowledgehub-card {
+        width: 100%;
+    }
+    .fs-play-button {
+        position: absolute;
+        margin-left: 10rem;
+        margin-top: 0rem;
+    }
+}
+
+.input-search {
+    border-radius: 2em;
+}
+
+.help-investing-nav>.nav-item {
+    border-radius: 10px;
+}
+
+.help-investing-nav>.nav-item:hover {
+    background: #283990;
+    box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+}
+
+.help-investing-nav>.nav-item>.nav-link.active {
+    background: #283990;
+    border-radius: 10px;
+    box-shadow: 0px 20px 40px rgba(40, 57, 144, 0.25);
+    color: white;
+}
+
+.help-investing-nav>.nav-item>a:hover {
+    color: white;
+}
+
+.border-fund-primary {
+    border: 1px solid #91be32;
+}

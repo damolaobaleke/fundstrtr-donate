@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/investInPitch.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--Stripe cdn for payments-->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+    <%-include('../partials/Navbar')%>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80 -->
+                <img class="img-fluid img-header fs-header-icon" src="https://images.crowdcube.com/unsafe/350x168/https://files-crowdcube-com.s3.amazonaws.com/opportunity_images/202005/359afd30ecb25d939cfed8678e8d2109.png" alt="Business logo">
+                <!--data.companyLogo-->
+                <img class="logo" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1601222543/Rectangle_20_dkgmqg.svg" alt="Business logo">
+                <h1 class="ml-1 ml-md-0 company-name">
+                    <%=data.projectName%>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row card border-0 card-fs py-4">
+                <!-- <form action="" method="POST"> -->
+                <div class="card-body justify-content-center">
+                    <div class="col-md-12">
+                        <h1 class="">Your Donation</h1>
+                        <p class="fs-note">You are about to donate into
+                            <%=data.projectName%>
+                        </p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ml-2">Amount to donate</p>
+                                <input id="valueInvesting" type="number" class="fs-invest-input px-2 mx-2" name="pitch[amountReceived]">
+                            </div>
+                        </div>
+                        <small id="amountText"></small>
+                        <hr>
+                        <!--2.9% + 0.30c(stripe fee) of amount +  1.5%(investment fee) of amount-->
+                        <p class="mt-2 fs-trans">Transaction fee <span class="ml-1" id="help"><i class="far fa-question-circle"></i></span>
+                        </p>
+                        <hr>
+                        <p class="mt-4 fs-amount-billed" id="totalAmount">Total amount billed: $</p>
+                        <hr>
+
+
+                        <div class="fs-mid-line-zero"></div>
+                        <div class="fs-mid-line"></div>
+
+                        <div class="fs-mid-line-two"></div>
+
+                        <h1 class="text-left" style="margin-top: 9rem;">Payment Details</h1>
+
+                        <div class="spinner-root mt-5">
+                            <form id="payment-form" class="justify-content-center">
+                                <div class="form-group">
+                                    <div id="card-element">
+                                        Stripe Elements will create input elements here
+                                    </div>
+
+
+                                    <!-- <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="card-label" for="card-number">Credit Card Number</label>
+                                        <div id="card-number">
+                                             Stripe Elements will create input elements here
+                                        </div>
+                                        <putting the error messages in this element 
+                                        <div id="card-errors" class="" role="alert"></div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="card-label" for="card-expiry">Expiration Date</label>
+                                        <div id="card-expiry">
+                                             Stripe Elements will create input elements here
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-md-6">
+                                        <label class="card-label" for="card-cvc">Security Code</label>
+                                        <div id="card-cvc"></div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div> -->
+
+                                    <!--putting the error messages in this element -->
+                                    <div id="card-errors" class="" role="alert"></div>
+
+                                    <p class="mt-5">By clicking on “proceed to invest”, you agree to the terms and conditions of Fundstrtr. This investment is approved by fundstrtr under eazifunds inc.</p>
+                                    <button id="submit" class="btn invest-button mt-4 px-5"><div class="spinner hidden" id="spinner"></div><span id="button-text">Proceed to invest</span></button>
+                                    <p class="complete" style="display: none;">Investing has been completed for this pitch</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </form> -->
+
+
+
+
+            <!--Approved by Fundstrtr-->
+            <div class="row mt-5 pb-5">
+                <div class="col-md-12">
+                    <h4 class="fs-pitchApproval">This donatee is approved by fundstrtr</h4>
+
+                    <p>Every donatee on fundstrtr is reviewed to ensure it is fair, clear and not misleading.</p>
+                    <p>As part of our commitment to investor transparency, <a class="" href="#" style="color: #91BE32; font-weight: 700;">Fundstrtr's Due Diligence Charter outlines</a> the analysis and verification that is conducted on equity fundraises
+                        on fundstrtr by our legal and compliance professionals.</p>
+
+
+                </div>
+            </div>
+            <!--Approved by Fundstrtr-->
+        </div>
+        </div>
+
+
+
+
+        <!--Risk Warning (Section 4)-->
+
+        <input value="<%=data._id%>" class="pitch-id" style="display: none;">
+        <input value="<%=currentUser._id%>" class="user-id" style="display: none;">
+
+        <%- include("../partials/footer")%>
+
+</body>
+
+<!--Add to header files in partials-->
+<div class="container">
+    <!--if theres anything in the error array-->
+    <%if(errorMessage && errorMessage.length > 0){%>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-danger mt-4" role="alert">
+                    <%=errorMessage%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+            <%if(successMessage && successMessage.length > 0){%>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="alert alert-success mt-4" role="alert">
+                            <%=successMessage%>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+</div>
+
+<script src="/javascript/investInPitch.js"></script>
+
+</html>
+
+<script>
+    // var pitchId = "<%=data._id%>"
+    // console.log(pitchId)
+
+    var sharePrice = "<%=data.sharePrice%>";
+    console.log(sharePrice)
+
+    var amountToCharge = document.getElementById("valueInvesting")
+    var investButton = document.getElementById('submit')
+    let sharesReceived = document.getElementById('sharesReceived')
+    let amountText = document.getElementById('amountText');
+    let billedAmount = document.getElementById('totalAmount')
+    let amountChargeWithFee;
+
+    //var errorMultiples = document.getElementById('multiples')
+
+    amountToCharge.addEventListener('input', function() {
+        let chargeAmount = amountToCharge.value;
+
+        if (amountToCharge.value < 10) {
+            //Minimum donation is $10
+
+            amountText.textContent = `You are donating $ ${amountToCharge.value}`;
+
+            //Disable invest button
+            investButton.style.display = "none"
+
+            //show error
+            //errorMultiples.style.display = "block"
+        } else {
+            amountText.textContent = `You are donating $ ${amountToCharge.value}`;
+
+            amountChargeWithFee = 0.30 + parseInt(chargeAmount)
+
+            console.log(amountChargeWithFee)
+            billedAmount.textContent = `Total amount billed: $ ${amountChargeWithFee}`;
+
+
+            //Enable invest button
+            investButton.style.display = "block"
+
+            //errorMultiples.style.display = "none"
+        }
+
+        totalSharesRecieved = amountToCharge.value / sharePrice
+        sharesReceived.textContent = `Total shares being received: ${totalSharesRecieved}`
+        console.log(totalSharesRecieved);
+    })
+
+    function checkMetRaisingTarget() {
+        let amountRaised = "<%=data.amountRaised%>"
+        let raisingTarget = "<%=data.raisingAmount%>"
+        const displayNoteOnInvesting = document.querySelector('.complete')
+
+        if (amountRaised === raisingTarget) {
+            investButton.style.display = "none"
+            displayNoteOnInvesting.style.display = "block"
+        } else {
+            investButton.style.display = "block"
+            displayNoteOnInvesting.style.display = "none"
+        }
+    }
+</script>

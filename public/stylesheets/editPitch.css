@@ -1,0 +1,130 @@
+.sidebar-wrapper {
+    background-color: #283990;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.content {
+    background-color: rgb(223, 215, 215);
+}
+
+.tracking {
+    color: #FFFFFF;
+}
+
+.side-bar-text {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+body,
+input,
+button {
+    font-family: 'Montserrat';
+}
+
+.navbar {
+    /* background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
+}
+
+.navbar .navbar-brand {
+    color: #283990;
+    font-weight: bold;
+}
+
+.sidebar .nav {
+    margin-top: 0px !important;
+}
+
+.sidebar {
+    height: 85%!important;
+}
+
+.main-panel {
+    border-top: 2px solid #283990;
+}
+
+li a {
+    color: white;
+}
+
+li a:hover {
+    color: #FFFFFF;
+}
+
+.input-border {
+    border-color: #283990;
+}
+
+select,
+option {
+    font-family: 'Montserrat';
+    color: #283990;
+}
+
+textarea {
+    font-family: 'Montserrat';
+}
+
+.documents {
+    color: #91BE32;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+
+
+/* #f00a0a red */
+
+#updateBtn {
+    color: #f00a0a!important;
+    border: 2px solid #f00a0a!important;
+    background: transparent;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+#updateBtn:hover {
+    background-color: transparent!important;
+}
+
+.fs-explain {
+    font-size: 0.7rem;
+    color: #f00a0a!important;
+}
+
+.edit-text {
+    float: none!important;
+    margin: 0rem!important;
+    transition: 1s!important;
+    display: block;
+    color: #91BE32;
+    font-family: 'Montserrat'!important;
+    font-weight: bold!important;
+    font-size: 12px!important;
+}
+
+.card .logo-card {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    margin-left: 1.5rem;
+}
+
+#tixdt {
+    display: none;
+}
+
+.modal {
+    /* background: white;
+    margin-top: 130px;
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    left: 400px; */
+    border-radius: 25px;
+    /* background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/BG_Design-2_rsikr7.png");
+    background-repeat: no-repeat;
+    background-position: left top; */
+}

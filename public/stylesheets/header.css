@@ -1,0 +1,197 @@
+.navbar {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91BE32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91BE32;
+    color: white;
+}
+
+a,
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+h5 {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+.login {
+    font-size: 14px;
+}
+
+.joinbutton {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+    ;
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91BE32;
+    border: none;
+    font-size: 1rem;
+}
+
+.modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.close {
+    outline: none;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 60px;
+    width: 420px;
+}
+
+h5 {
+    font-family: Montserrat;
+    color: #283990;
+}
+
+p {
+    color: #283990;
+    font-family: Montserrat;
+    font-size: 0.9rem;
+}
+
+small {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+label {
+    color: #283990;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 900px) {}
+
+@media(max-width: 900px) {
+    /* .donatees{
+      margin-top: 2rem; 
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }  */
+    .joinbutton {
+        margin-top: 1rem;
+        align-self: center;
+    }
+    li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .animated-icon {
+        width: 30px;
+        height: 20px;
+        position: relative;
+        margin: 0px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+    /*Vue transitions  */
+    .slide-fade-enter-active {
+        transition: all .8s ease;
+    }
+    .slide-fade-leave-active {
+        transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .slide-fade-enter,
+    .slide-fade-leave-to
+    /* .slide-fade-leave-active below version 2.1.8 */
+    {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+}

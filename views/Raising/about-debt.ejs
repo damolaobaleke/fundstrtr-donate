@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/about-equity.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-md py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1585083673/Frame_nct3fp.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"
+                            style="color: #283990; font-size:28px;"></i></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navlinks">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link btn px-4 py-2 donatees" href="/donation-opportunities">Investment Opportunities</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/investing">Investing</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/raising">Raising</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link login" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a id="jn" class="nav-link btn btn-primary border-0 px-5 py-2 joinbutton" href="/signup">Join</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Modal Start-->
+    <div class="modal fade" id="Login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content fs-lgn-modal-content">
+                <div class="modal-header fs-lgn-modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img class="closeModal"
+                                src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442330/Fundstrtr/Group_1193_ogdtn0.png"
+                                alt="closeModal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 justify-content-center px-5">
+                            <h5 class="mt-2 lgn-welcome-back">Welcome back</h5>
+                            <p class="mt-3">Sign in below to enjoy premium service investment Opportunities</p>
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="email">
+
+                                    <label for="Password">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="password">
+                                </div>
+                                <div>
+                                    <a href="signup" class="form-control btn btn-secondary rounded-pill py-2">Register</a>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="form-control btn btn-secondary rounded-pill mt-2 py-2">Sign In</button>
+                                </div>
+                                <small class="text-center ml-md-5 lgn-social-account">Or login with your social account</small>
+                            </form>
+
+                            <div class="row justify-content-around justify-content-md-center modal-social">
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/facebook"><img class="fb" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990461/Fundstrtr/Group_1208_jvndnq.png" alt="facebook login"></a>
+                                </div>
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/linkedin"><img class="lnkdin" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1207_fu7lme.png" alt="facebook login"></a>
+                                </div>
+
+                                <div class="col-3 col-md-3">
+                                    <a href="/auth/google"><img class="google" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1587990462/Fundstrtr/Group_1206_dki225.png" alt="facebook login"></a>
+                                </div>
+                            </div>
+
+                            <div class="lower-background">
+                                <p><a id="forgot" class="" href="#">Forgot Password ? </a></p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img class="door" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1590442332/Fundstrtr/Mask_Group_ntz6js.png" alt="door image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal End-->
+    <!--Nav-->
+
+
+    <div class="container">
+        <div class="row">
+            <h1 class="mt-2 ml-2">News</h1>
+            <div class="d-flex justify-content-around">
+                <form action="" method="GET">
+                    <ul class="py-3 news-list">
+                        <li class="pr-2">
+                            <a id="r" onclick="raisingChosen()" class="btn btn-primary fs-raise-btn border-0 rounded-pill py-1 px-4" href="/raising" name="Raising">Raising</a>
+                        </li>
+
+                        <li class="px-2">
+                            <a id="i" class="btn btn-primary fs-raise-btn border-0 rounded-pill py-1 px-4" href="#" name="Investing">Investing</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-7">
+                <h1>About Debt crowdfunding</h1>
+                <small>By Fundstrtr 14-08-2020</small>
+                <!--Come from DB-->
+                <p class="mt-2"><img class="border-0 equity-img" src="https://images.unsplash.com/photo-1565514158882-617325fbd873?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="debt_crowdfung_tellmemmore"></p>
+                <p class="py-1">Want to learn more about equity crowdfunding? Read on to find out exactly how it works, as well as the benefits for both investor and entrepreneur! At Crowdcube we want to create an equity crowdfunding experience that everybody loves,
+                    so let’s start with the basics.</p>
+
+                <h3 class="mt-4">What is crowdfunding?</h3>
+                <p class="py-1">Crowdfunding is where a number of people pool their money together to back a new idea or business. It’s a popular financing method for new businesses, especially those who struggle to find funding or don’t want to go through more traditional
+                    routes. There are a few different crowdfunding models, including equity, reward-based, donation-based, micro-lending, peer-to-peer and peer-to-business.</p>
+
+                <h3 class="mt-4">How does debt crowdfunding Work ?</h3>
+                <p class="py-1">Equity crowdfunding platforms, like ours, enable all kinds of businesses, such as ‘startup, early and growth-stage’, to get the boost they need from a ‘crowd’ of investors. These can be a mixture of everyday investors, professionals, angels
+                    and venture capital firms. In return, the investors get a certain stake of equity in the business, meaning they can help fuel the businesses they love and watch them grow.</p>
+
+                <h3 class="mt-4">Who can raise funds through debt crowdfunding?</h3>
+                <p class="py-1">Businesses that want to supercharge their growth through equity crowdfunding generally already have some traction and are looking to raise anything from £50,000 to around £7m (€8m under the current EU Prospectus rules) or more under a
+                    Prospectus. We help businesses in Africa and Europe, are a private limited company, have a website or app and are looking to engage their community.</p>
+
+                <h3 class="mt-4">What types of businesses can I invest in?</h3>
+                <p class="py-1">Lots of different types of businesses from a range of different sectors turn to the crowd, making investment opportunities increasingly diverse. If you’re interested in backing a business and making an investment, you can invest from as
+                    little as $10, with no maximum. Those investments result in pro-rata ownership of the company via ordinary or B investment shares. Ideally, if the company grows as expected thanks to the new funding, investors can hope to see a return
+                    on their investment.</p>
+
+                <h3 class="mt-4"></h3>
+                <p class="py-1"></p>
+
+            </div>
+
+            <div class="col-md-5">
+                <div class="row">
+                    <h1 class="ml-5">Related Articles</h1>
+                    <div class="col-md-10">
+                        <div class="card mb-5 mb-md-0 ml-md-5 mt-5">
+                            <div class="card-title">
+                                <img class="article-card-img" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586114784/attractive-beautiful-woman-beauty-2737046_2_giij9k.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h2>StateSpace on the rise</h2>
+                                <p>With over $500 thousand successfully invested through fundstrtr, our growing community of investors have funded the rising aim gaming training platfrom statespace..</p>
+                                <a class="btn btn-outline" href="#"><span>Read more</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Risk Warning (Section 4)-->
+    <div id="risk-body">
+        <div class="container justify-content-center">
+            <section class="row mt-5 ml-2 ml-md-0">
+                <h1 class="risk">Risk Warning</h1>
+                <p class="mt-2">An investor may earn less than the amount invested. Information on past performance, where given, is not necessarily a guide to future performance. The situation of an entity can change rapidly, which may be as a result of several things:
+                    general economic conditions, sector-specific problems, foreign exchange depreciation and mismanagement by the entity.</p>
+                <p class="mt-2">Because you are likely to self-direct yourself for this investment, you should regularly review your portfolio, or seek professional advice, to ensure that the underlying businesses remain in line with your investment objectives. This
+                    can be particularly important for those investing towards a defined time horizon – for example, those investing for retirement via a pension.</p>
+                <p class="mt-2">This write-up is not intended to be fully inclusive of all relevant risks; we would strongly encourage you to ensure that you have read all relevant literature and that you are comfortable that you understand all of the associated risks
+                    relating to an investment before you decide whether or not to purchase it.Should you be in any doubt as to the risks involved, or to the suitability of a particular investment, you should seek professional financial advice. </p>
+            </section>
+        </div>
+    </div>
+    <%- include("../partials/footer")%>
+</body>
+
+</html>
+
+<script>
+    function raisingChosen() {
+        if (event) {
+            event.preventDefault()
+        }
+        var raising = document.getElementById("r")
+        raising.classList.toggle("picked")
+    }
+</script>

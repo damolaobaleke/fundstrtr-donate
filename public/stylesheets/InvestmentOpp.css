@@ -1,0 +1,495 @@
+body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127_qmn6op.png"), url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.navbar {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-item .nav-link {
+    font-size: 14px;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #91BE32;
+}
+
+.donatees {
+    border: 1px solid #283990;
+    border-radius: 20px;
+    color: #283990;
+    outline: none;
+    font-size: 14px;
+}
+
+.joinbutton {
+    color: #F8F8F8;
+    background: #283990;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+#jn:hover {
+    /*.btn.btn-primary*/
+    background-color: #91BE32;
+    color: white;
+}
+
+a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    color: #283990;
+    font-size: 0.85rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Montserrat;
+    color: #283990;
+    border-right: solid #e4e4e4;
+    border-width: 0 1px;
+}
+
+span {
+    color: #91BE32;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+h5 {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #283990;
+}
+
+
+/* .fa-bookmark{
+        margin-top: -14rem;
+        margin-left: 19rem;
+        color:#91BE32;
+    } */
+
+
+/*Login Modal*/
+
+.fs-lgn-modal-content {
+    border-radius: 25px;
+    width: 800px;
+    height: 543px;
+    border: none;
+    margin-left: -8rem;
+    margin-top: 5rem;
+}
+
+.fs-lgn-modal-header {
+    background: transparent;
+    border: none;
+    padding: 0rem;
+}
+
+.modal-header .close {
+    padding: 0rem;
+}
+
+.closeModal {
+    margin-top: -4rem;
+    outline: none;
+}
+
+.modal-backdrop {
+    background: rgba(0, 9, 56, 0.7);
+    filter: blur(15px);
+    ;
+}
+
+.lgn-welcome-back {
+    font-family: Montserrat;
+    color: #283990;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+.btn-secondary {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    background-color: #91BE32;
+    border: none;
+    font-size: 1rem;
+}
+
+.lgn-social-account {
+    color: #283990;
+    font-family: Montserrat;
+}
+
+.modal-email {
+    color: #283990;
+    background: none!important;
+    padding: none!important;
+}
+
+input {
+    border-color: #283990;
+    color: #283990;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.door {
+    width: 105%;
+    height: 100%;
+    margin-top: -1.05rem;
+}
+
+.lower-background {
+    background: #283990;
+    border: 1px solid #283990;
+    border-bottom-left-radius: 25px;
+    margin-left: -3.1rem;
+    height: 52px;
+    width: 420px;
+}
+
+#forgot {
+    color: white;
+    margin-left: 8.5rem;
+    margin-top: 3rem;
+}
+
+
+/*Login Modal*/
+
+.bookmark {
+    height: 40px;
+    width: 40px;
+    margin-top: -14rem;
+    margin-left: 19rem;
+}
+
+#ff-inline {
+    border-right: 1px solid #e4e4e4;
+    height: 4rem;
+    padding: 0 1em;
+}
+
+@media(min-width: 900px) {
+    .card {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+        border-radius: 25px;
+        border: none;
+        /* height: 35rem; */
+        width: 23rem;
+        max-width: 23rem;
+    }
+    .card:hover {
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .6);
+        transition: 1s;
+        transform: translateZ(1rem);
+    }
+    .card-header {
+        height: 14%;
+        background-color: inherit;
+        margin-top: 2.5rem;
+    }
+    .img-header {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        border-bottom-right-radius: 15px!important;
+        border-bottom-left-radius: 15px!important;
+    }
+    .progress {
+        height: 5px;
+        width: 300px;
+    }
+    .progress-color {
+        background-color: #91BE32;
+    }
+    .logo {
+        width: 108.55px;
+        height: 107.09px;
+        margin-top: -6rem;
+        margin-left: -1.5rem;
+        border: 5px solid #FFFFFF;
+        filter: drop-shadow(0px 10px 20px rgba(146, 163, 255, 0.2));
+        border-radius: 100px;
+        object-fit: none;
+        /* border: 1px solid gray; add if logo wouldnt be circular/rounded */
+        /* margin-left: 16rem; */
+    }
+    .days-left {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 126px;
+        height: 42px;
+        margin-left: 9rem;
+        background: #283990;
+        border-radius: 0px 25px;
+        font-weight: 500;
+        color: white!important;
+        text-align: center;
+        padding-top: 8px;
+    }
+    .blur-bg {
+        display: none;
+        transition: 1s;
+        font-family: 'Montserrat';
+        color: #283990;
+        margin-top: -400px;
+    }
+}
+
+@media(max-width: 900px) {
+    .card {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(160, 176, 255, 0.2);
+        border-radius: 25px;
+        border: none;
+        /* height: 35rem; */
+        /* width: 23rem; */
+    }
+    .card:hover {
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .6);
+        transition: 1s;
+        transform: translateZ(1rem);
+    }
+    .card-header {
+        height: 14%;
+        background-color: inherit;
+        margin-top: 2.5rem;
+    }
+    .img-header {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        border-bottom-right-radius: 15px!important;
+        border-bottom-left-radius: 15px!important;
+        height: 150px;
+    }
+    .progress {
+        height: 5px;
+        width: 300px;
+    }
+    .progress-color {
+        background-color: #91BE32;
+    }
+    .logo {
+        width: 108.55px;
+        height: 107.09px;
+        margin-top: -8rem;
+        margin-left: -1.5rem;
+        border: 5px solid #FFFFFF;
+        filter: drop-shadow(0px 10px 20px rgba(146, 163, 255, 0.2));
+        border-radius: 100px;
+        object-fit: none;
+        /* border: 1px solid gray; add if logo wouldnt be circular/rounded */
+        /* margin-left: 16rem; */
+    }
+    .days-left {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 126px;
+        height: 42px;
+        margin-left: 9rem;
+        background: #283990;
+        border-radius: 0px 25px;
+        font-weight: 500;
+        color: white!important;
+        text-align: center;
+        padding-top: 8px;
+    }
+}
+
+h2,
+legend {
+    font-weight: bold;
+    font-family: Montserrat;
+    color: black;
+    font-size: 1rem;
+    margin-left: 7rem;
+}
+
+span {
+    color: #91BE32;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #283990;
+}
+
+.fa-plus {
+    color: #283990;
+    margin-left: 7rem;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li input {
+    text-align: center;
+    padding: 16px;
+}
+
+input {
+    font-style: italic;
+}
+
+label {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 14px;
+    color: #4d4d4d;
+    /* border: 1px solid gray; */
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    padding: .2rem .9rem .2rem .9rem;
+    /**t r b l */
+}
+
+.labelPicked {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 14px;
+    color: #ffffff;
+    /* border: 1px solid gray; */
+    border-radius: 10px;
+    background-color: #29383c;
+    padding: .2rem .9rem .2rem .9rem;
+    /**t r b l */
+}
+
+.hidePitch {
+    display: none;
+}
+
+.filter {
+    border-color: #e4e4e4;
+    border-style: solid;
+    border-width: 0 1px;
+    display: table-cell;
+    padding: .8rem 1rem;
+    width: 13rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.applybutton {
+    font-size: 0.95rem;
+    font-weight: bold;
+    font-family: Montserrat;
+    background-color: transparent;
+    border: 2px solid #283990;
+    border-radius: 30px;
+    color: #283990;
+    margin-left: 6.5rem
+}
+
+.applybutton:hover {
+    background-color: #283990;
+    color: white;
+}
+
+#filterDepth {
+    padding-bottom: 2rem;
+    transition: 1s;
+    font-weight: bold;
+    display: none;
+}
+
+#fs-filter_sector_technology,
+#fs-filter_sector_finance,
+#fs-filter_sector_agric,
+#fs-filter_sector_realEstate {
+    visibility: hidden;
+}
+
+.footer {
+    background-color: #283990;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.lowfooter {
+    background-color: #EBEEFF;
+    color: #283990;
+    font-size: 14px;
+    margin-left: -1rem;
+    margin-right: -0.96rem;
+}
+
+.topfooter {
+    background-color: #EBEEFF;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.footer .address a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF
+}
+
+.footer .socials a {
+    color: #FFFFFF
+}
+
+#risk-body {
+    background-image: url("https://res.cloudinary.com/https-eazifunds-com/image/upload/v1586441204/Fundstrtr/Group_1127-1_elgdb1.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #EBEEFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.risk {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #283990;
+}
+
+p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #283990;
+}

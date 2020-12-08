@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fundstrtr</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo150.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/InvestOppdetails.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <%-include('../partials/Navbar')%>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80 -->
+                <img class="img-fluid img-header fs-header-icon" src="https://images.crowdcube.com/unsafe/350x168/https://files-crowdcube-com.s3.amazonaws.com/opportunity_images/202005/359afd30ecb25d939cfed8678e8d2109.png" alt="Business logo">
+
+                <div class="col-md-2">
+                    <img class="logo rounded" src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1601222543/Rectangle_20_dkgmqg.svg" alt="Business logo">
+                </div>
+
+                <div class="col-md-10">
+                    <div class="row card card-fs">
+                        <div class="col-md-6 fs-col1">
+                            <h1 class="ml-1 ml-md-0">
+                                <%=data.tradingName%>
+                            </h1>
+                            <div class="progress rounded-pill mt-4">
+                                <div class="progress-bar progress-color" role="progressbar" style="width: 1%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <div>
+                                <%var aR = data.amountRaised%>
+                                    <%var rA =data.raisingAmount%>
+                                        <p class="py-2">
+                                            <% let p = Math.round(aR/rA*100)%>
+                                                <%if(isNaN(p)){%>
+                                                    <%p =0 %>
+                                                        <%}%>
+                                                            <%=p%>% Funded
+                                        </p>
+                            </div>
+
+                            <section class="d-flex justify-content-left mt-3">
+                                <div class="wrap">
+                                    <!--Raising target-->
+                                    <%var raisingAmount = data.raisingAmount%>
+                                        <p class="fs-values"><span>$<%=data.raisingTarget.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></span></p>
+                                        <p class="raised">Target</p>
+                                </div>
+
+                                <div class="wrap">
+                                    <p class="ml-4 fs-values"><span><%=data.investor.length%></span></p>
+                                    <p class="raised ml-4">Donators</p>
+                                </div>
+
+                                <div class="wrap">
+                                    <!--dynamic, increment. matched with progress <%=data.amountRaised%>-->
+                                    <%if(data.amountRaised){%>
+                                        <p class="ml-5 fs-values"><span>$<%=data.amountRaised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")%></span></p>
+                                        <%}else{%>
+                                            <p class="ml-5 fs-values">0</p>
+                                            <%}%>
+                                                <p class="raised ml-5">Raised</p>
+                                </div>
+                            </section>
+
+                            <div>
+                                <h2>Summary</h2>
+                                <p class="fs-summary">
+                                    <%=data.idea%>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <section class="d-flex justify-content-left mt-3">
+
+
+                                <div class="wrap">
+                                    <!--dynamic,decrement-->
+                                    <% const daysleft = daysLeft%>
+                                        <%if(daysleft ==0){%>
+                                            <!--disable invest button-->
+                                            <p class="ml-4"><span id="equity-column"><%=daysleft%></span></p>
+                                            <p class="equity ml-3">Days left</p>
+                                            <%}else{%>
+                                                <p class="ml-4"><span id="equity-column"><%=daysleft%></span></p>
+                                                <p class="equity ml-3">Days left</p>
+                                                <%}%>
+                                </div>
+                            </section>
+
+                            <div class="mt-2">
+                                <a class="social-links pr-3" href="<%=data.instagramUrl%>"><i class="fab fa-instagram"></i></a>
+                                <a class="social-links px-3" href="<%=data.facebookUrl%>"><i class="fab fa-facebook-square"></i></a>
+                                <a class="social-links px-3" href="<%=data.companyWebsite%>"><i class="fas fa-globe-africa"></i></a>
+                                <a class="social-links pl-3" href="<%=data.linkedinUrl%>"><i class="fab fa-linkedin"></i></a>
+                                <p>
+                                    <!--For dev-->
+                                    <%=data.created.toDateString()%>
+                                </p>
+                            </div>
+
+                            <div class="">
+                                <h2>Milestones</h2>
+                                <ul class="milestones">
+                                    <li>
+                                        <%=data.milestone%>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <form action="/donation-opportunities/pitches/<%=data._id%>/invest" method="GET">
+                                <div class="row">
+                                    <span><img src="https://res.cloudinary.com/https-eazifunds-com/image/upload/v1601301308/aqklg6xso1mwkj3qo06g.svg" alt="dollar_sign"><input style="outline: none;" class="mr-2 px-3 fs-invest-input" type="number" min="10" step="10"></span>
+                                </div>
+                                <button id="" type="submit" class="btn px-5 mt-3 py-1 invest-button">Donate</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="row fs-low-card-layer">
+                        <h3 class="documents px-5">Contact the company</h3>
+
+                        <a class="documents px-2" href="https://mail.google.com/mail/?view=cm&fs=1&to=<%=data.email%>" target="_blank"><i class="far fa-envelope"></i> Send an email</a>
+                        <a class="documents px-2" href="tel:<%=data.phoneNumber%>"><i class="fas fa-phone-alt"></i> Request a call</a>
+                        <a class="documents px-2" href="https://mail.google.com/mail/?view=cm&fs=1&to=<%=data.email%>"><i class="fas fa-handshake"></i> Request a meeting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!---->
+            <div class="d-flex justify-content-around mt-5 border-top border-bottom py-2">
+                <a class="short-link" href="#idea">Idea</a>
+                <a class="short-link" href="#Team">Team</a>
+                <a class="short-link" href="#docs">Documents</a>
+                <a class="short-link" href="#discussions">Discuss</a>
+            </div>
+            <!---->
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h1 id="idea" class="">Idea</h1>
+                    <p class="text-center text-md-left fs-idea">
+                        <%=data.idea%>
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <!--Team Video from DB(String or File(more complex))-->
+                    <iframe class="video ml-2" src="https://www.youtube.com/embed/R3caBPj-6Sg" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <hr>
+
+            <!--Team. Carousel of images ?-->
+            <h1 id="Team" class="">Team</h1>
+            <div class="row mt-4 pb-3">
+                <!--Pos 1-->
+                <div class="col-md-4">
+                    <div class="card team-card border-0 mb-3 mb-md-0">
+                        <!--Team image from db (String or File)-->
+                        <img class="img-fluid team-img" src="<%=data.teamMember1.picture%>" alt="Team images">
+                        <div class="team-card card-body">
+                            <h5 class="card-title team-card-title">
+                                <!--Note Hooli and piedpier wont work because it was stored with a different model-->
+                                <%=data.teamMember1.position%> -
+                                    <%=data.teamMember1.name%>
+                            </h5>
+                            <p class="card-text team-card-text">
+                                <%=data.teamMember1.details%>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card team-card border-0 mb-3 mb-md-0">
+                        <!--Team image from db (String or File)-->
+                        <img class="img-fluid img-responsive team-img" src="https://images.crowdcube.com/unsafe/570x0/filters:format(jpeg):max_bytes(50000)/https://files-crowdcube-com.s3.amazonaws.com/files/opportunity_section_media/original/202003/estherbandw_a7f98e116977f52feb0b4aae6171d91b.jpg"
+                            alt="Team images">
+                        <div class="team-card card-body">
+                            <h5 class="card-title team-card-title">
+                                <%=data.teamMember2.position%> -
+                                    <%=data.teamMember2.name%>
+                            </h5>
+                            <p class="card-text team-card-text">
+                                <%=data.teamMember2.details%>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card team-card border-0 mb-3 mb-md-0">
+                        <!--Team image from db (String or File)-->
+                        <img class="img-fluid team-img" src="https://images.unsplash.com/photo-1559548331-f9cb98001426?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Team images">
+                        <div class="team-card card-body">
+                            <h5 class="card-title team-card-title">
+                                <%=data.teamMember3.position%> -
+                                    <%=data.teamMember3.name%>
+                            </h5>
+                            <p class="card-text team-card-text">
+                                <%=data.teamMember3.details%>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Team-->
+            <hr>
+
+
+            <hr>
+
+            <!--Updates & Discussions-->
+            <h1 id="discussions">Updates & Discussions</h1>
+            <div id="discussions" class="row mt-1 pb-5">
+                <div class="col-md-12">
+                    <h3><i class="fas fa-comments-dollar"></i>Investor Discussions</h3>
+                    <div class="well rounded py-3 px-3 fs-discussions" style="overflow-y: scroll;
+                height: 400px;">
+                        <!--For each comment create a new row-->
+                        <a href="/donation-opportunities/pitches/<%=data._id%>/details/comments/">Comments</a>
+                        <hr>
+                        <%data.discussion.forEach(function(uniqueDiscussion){ %>
+                            <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <strong class="text-dark"><%=uniqueDiscussion.author.username%></strong>
+                                    <p class="comment_days text-dark">10 days ago</p>
+                                    <p class="text-dark mt-1">
+                                        <%=uniqueDiscussion.comment%>
+                                    </p>
+
+                                    <p>Replies</p>
+
+                                    <%uniqueDiscussion.replies.forEach(function(uniqueReply){%>
+                                        <p class="text-dark" style="color: #283990;font-weight: 900;">
+                                            <!--<%=uniqueReply%>.reply-->
+                                            <%=uniqueReply.author.username%>
+                                        </p>
+                                        <p class="text-dark">
+                                            <!--<%=uniqueReply%>.reply-->
+                                            <%=uniqueReply.reply%>
+                                        </p>
+                                        <%})%>
+
+
+                                            <!--if someone is logged in and the author id of comment == currentUsers id-->
+                                            <%if(uniqueDiscussion.author.size > 0){%>
+                                                <%if(currentUser && uniqueDiscussion.author.id.equals(currentUser._id)){%>
+                                                    <!--Edit Comment -UPDATE !!-->
+                                                    <!-- <a class="" href="/donation-opportunities/pitches/<%=data._id%>/details/comments/<%=uniqueDiscussion._id%>/edit"><i class="far fa-edit"></i></a> -->
+                                                    <%}%>
+                                                        <%}%>
+
+                                                            <span style="cursor: pointer;" class="reply_button"><i class="fas fa-reply"></i></span><br>
+                                                            <!--Might change to normal text input-->
+                                                            <form action="/donation-opportunities/pitches/<%=data._id%>/details/comments/<%=uniqueDiscussion._id%>/replies" method="POST">
+                                                                <textarea placeholder="Enter a reply..." class="reply_box pl-md-3 py-1" name="reply" id="" cols="60" rows="1"></textarea>
+                                                                <span class="icon-send"><button style="border: none;background: none;" type="submit"><i class="far fa-paper-plane"></i></button></span>
+                                                            </form>
+                                </div>
+                            </div>
+                            <%})%>
+                    </div>
+
+                    <a class="btn pt-3 mt-2 btn-discussion" href="/donation-opportunities/pitches/<%=data._id%>/details/comments/new">Start a Discussion</a>
+                </div>
+            </div>
+
+            <div class="modal fade" id="contact" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header border-0">
+                            <button id="closeVideo" type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Updates & Discussions-->
+
+            <hr>
+
+            <hr>
+            <!--Approved by Fundstrtr-->
+            <div class="row mt-5 pb-5">
+                <div class="col-md-12">
+                    <h4 class="fs-pitchApproval">This pitch is approved by fundstrtr</h4>
+
+                    <p>Every donatee on fundstrtr is reviewed to ensure it is fair, clear and not misleading.</p>
+                    <p>As part of our commitment to investor transparency, <a class="" href="#" style="color: #91BE32; font-weight: 700;">Fundstrtr's Due Diligence Charter outlines</a> the analysis and verification that is conducted on equity fundraises
+                        on fundstrtr by our legal and compliance professionals.</p>
+
+                </div>
+            </div>
+            <!--Approved by Fundstrtr-->
+
+            <!-- <p>--If Logged in as ADMIN(User)--</p> -->
+            <%if(data.email === currentUser.email){%>
+                <a class="btn btn-outline-danger my-3" href="/donation-opportunities/pitches/<%=data._id%>/details/edit/dashboard">Edit Donatee</a>
+                <%}%>
+        </div>
+
+
+
+
+        <!--Risk Warning (Section 4)-->
+
+        <%- include("../partials/footer")%>
+            <script src="/javascript/InvOppdetailsLogic.js"></script>
+</body>
+
+</html>
+
+<script>
+    let progress = document.querySelector(".progress-bar")
+    var replyButton = document.querySelectorAll('.reply_button');
+    var replyInput = document.querySelectorAll('.reply_box');
+    let sendIcon = document.querySelectorAll('.icon-send')
+
+    console.log("<%=aR/rA*100%>%")
+    progress.style.width = "<%=aR/rA*100%>%"
+
+
+    var ss = "<%=data.amountReceived.length%>"
+    console.log(ss)
+
+    let replyInputShown = true;
+
+    // for (i = 0; i < replyButton.length; i++) {
+    //     console.log(replyButton[i])
+
+    //     replyButton[i].addEventListener('click', function() {
+    //         for (i = 0; i < replyInput.length; i++) {
+    //             if (replyInputShown) {
+    //                 replyInput[i].style.display = "block";
+    //                 replyInputShown = false;
+    //             } else {
+    //                 replyInput[i].style.display = "none";
+    //                 replyInputShown = true;
+    //             }
+    //         }
+    //     })
+    // }
+
+    //When using queryselector
+
+    replyButton.forEach(function(button) {
+        button.addEventListener("click", function() {
+            replyInput.forEach(function(input) {
+                if (replyInputShown) {
+                    input.style.display = "block";
+                    showSendIcon()
+                    replyInputShown = false;
+                } else {
+                    input.style.display = "none";
+                    removeSendIcon()
+                    replyInputShown = true;
+                }
+            })
+        })
+    })
+
+    function showSendIcon() {
+        for (i = 0; i < sendIcon.length; i++) {
+            sendIcon[i].style.display = "block"
+        }
+    }
+
+    function removeSendIcon() {
+        for (i = 0; i < sendIcon.length; i++) {
+            sendIcon[i].style.display = "none"
+        }
+    }
+</script>
