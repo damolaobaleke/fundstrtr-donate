@@ -15,8 +15,17 @@ passportLocalMongoose = require('passport-local-mongoose'),
     fileSystem = require('fs'),
     methodOverride = require('method-override'),
     flash = require('connect-flash')
+    RateLimit = require('express-rate-limit');
 
 const fileupload = require('express-fileupload');
+
+//Rate Limiter
+//max 5 requests per minuter-prevent denial-of-service attack
+var limiter = new RateLimit({
+    windowMs: 1*60*1000, // (60,000ms) 1 minute
+    max: 5
+});
+  
 
 //Production -ScaleGrid
 var certificateFileBuf = fileSystem.readFileSync("sslCA");
@@ -48,9 +57,10 @@ mongoose.connect('mongodb://localhost/fundstrtr_donate_app', { useNewUrlParser: 
 var app = express()
 
 app.use(express.json())
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static(__dirname + "/public"))
-app.use(methodOverride("_method")) //whenever app gets a request having _method use that new request to override 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + "/public"));
+app.use(methodOverride("_method")) //whenever app gets a request having _method use that new request to override
+app.use(limiter); 
 app.set("view engine", "ejs");
 
 //MODELS
